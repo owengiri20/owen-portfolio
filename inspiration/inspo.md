@@ -9,3 +9,11 @@ name loading screen https://www.onyedika.xyz/
 https://bonhomme.lol/
 
 https://getcssscan.com/css-box-shadow-examples
+
+TODO
+
+- nav links // smooth scroll
+- light / dark mode
+- projects
+- expirience
+- mailto
