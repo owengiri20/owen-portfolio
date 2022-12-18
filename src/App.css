@@ -225,6 +225,15 @@ footer {
     height: 11rem;
   }
 
+  .experience-card {
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  .experience-card > .time-span {
+    width: unset;
+  }
+
   .project-card {
     width: 100%;
   }
