@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import "./App.css";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faGithub,
@@ -42,16 +42,37 @@ const Hero = () => {
 
 const Nav = () => {
   const [show, setShow] = useState(false);
+  const [_mode, _setMode] = useState(localStorage.getItem("mode") || "light");
+
+  const toggleMode = () => {
+    const mode = localStorage.getItem("mode") || "light";
+    localStorage.setItem("mode", mode === "light" ? "dark" : "light");
+    const mode2 = localStorage.getItem("mode") || "light";
+    _setMode(mode2);
+  };
 
   return (
     <div className="nav">
-      <div
-        id="nav-icon"
-        onClick={() => {
-          setShow((prev) => !prev);
-        }}
-      >
-        MENU
+      <div id="nav-icon">
+        <div
+          onClick={() => {
+            setShow((prev) => !prev);
+          }}
+        >
+          MENU
+        </div>
+
+        <div
+          onClick={() => {
+            toggleMode();
+          }}
+        >
+          {_mode === "light" ? (
+            <FontAwesomeIcon size="lg" icon={faMoon} />
+          ) : (
+            <FontAwesomeIcon size="lg" icon={faSun} />
+          )}
+        </div>
       </div>
 
       <div
@@ -135,7 +156,21 @@ const AboutMe = () => {
 };
 
 const WorkExperience = () => {
-  const skills = ["HTML", "CSS", "Javascript", "React"];
+  const exps = [
+    {
+      name: "Helping Minds - Zen",
+      span: "2020 - 2021",
+      description: "Lorem blah blah blah blahblah blahblah blah",
+      techs: ["HTML", "CSS", "Javascript", "React"],
+    },
+    {
+      name: "Net Zero",
+      span: "2020 - 2021",
+      description: "Lorem blah blah blah blahblah blahblah blah",
+      techs: ["HTML", "CSS", "Javascript", "React"],
+    },
+  ];
+
   return (
     <div className="work-experience">
       <div className="about-me-intro">
@@ -144,28 +179,41 @@ const WorkExperience = () => {
       </div>
 
       <div className="skills-container">
-        {skills.map((s) => {
-          return <ExperienceCard key={s} />;
+        {exps.map((ex) => {
+          return (
+            <ExperienceCard
+              name={ex.name}
+              span={ex.span}
+              description={ex.description}
+              techs={ex.techs}
+              key={ex.name}
+            />
+          );
         })}
       </div>
     </div>
   );
 };
 
-const ExperienceCard = () => {
+const ExperienceCard = ({
+  name,
+  span,
+  description,
+  techs,
+}: {
+  name: string;
+  span: string;
+  description: string;
+  techs: string[];
+}) => {
   return (
     <div className="experience-card">
-      <div className="time-span">2020-2021</div>
+      <div className="time-span">{span}</div>
 
       <div className="summary">
-        <h3>project name</h3>
-        <p>
-          projec desc Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Officiis exercitationem nostrum soluta aperiam animi sit ut minima,
-          ratione numquam reiciendis veniam ipsa quod expedita maiores rem
-          impedit possimus quaerat porro.
-        </p>
-        <div>Golang | Typescript | React | Material UI</div>
+        <h3>{name}</h3>
+        <p>{description}</p>
+        <div>{techs.join(" | ")}</div>
       </div>
     </div>
   );

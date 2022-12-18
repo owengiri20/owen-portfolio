@@ -14,9 +14,11 @@
   cursor: pointer;
   user-select: none;
   background-color: white;
+  display: flex;
+}
 
-  padding: 0.5rem;
-  width: fit-content;
+#nav-icon > div {
+  margin-right: 2rem;
 }
 
 #nav-items {
@@ -105,8 +107,9 @@
 }
 
 .experience-card {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   border-bottom: 1px solid black;
   padding-bottom: 1rem;
@@ -122,7 +125,7 @@
 }
 
 .project-card {
-  width: 300px;
+  width: 30%;
   margin-right: 2rem;
   margin-bottom: 2rem;
   border: 2px solid rgba(0, 0, 0, 0.3);
