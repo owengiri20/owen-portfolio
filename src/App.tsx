@@ -1,11 +1,19 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import "./App.css";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faGithub,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 import OwenJPG from "./assets/owen.jpg";
 
 function App() {
   return (
     <div className="app-wrapper">
+      <Nav />
       <Hero />
       <AboutMe />
       <WorkExperience />
@@ -27,6 +35,48 @@ const Hero = () => {
       {/* column 2 */}
       <div>
         <img src={OwenJPG} className="owen" alt="image of me (:" />
+      </div>
+    </div>
+  );
+};
+
+const Nav = () => {
+  const [show, setShow] = useState(false);
+
+  return (
+    <div className="nav">
+      <div
+        id="nav-icon"
+        onClick={() => {
+          setShow((prev) => !prev);
+        }}
+      >
+        MENU
+      </div>
+
+      <div
+        style={{
+          opacity: show ? "1" : "0",
+          transition: "all .1s ease-in",
+        }}
+        id="nav-items"
+      >
+        <div>About Me</div>
+        <div>Experience</div>
+        <div>Side Projects</div>
+        <div>Contact Me</div>
+
+        <div className="nav-socials">
+          <div>
+            <FontAwesomeIcon size="lg" icon={faGithub} />
+          </div>
+          <div>
+            <FontAwesomeIcon size="lg" icon={faLinkedin} />
+          </div>
+          <div>
+            <FontAwesomeIcon size="lg" icon={faEnvelope} />
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -167,15 +217,11 @@ const ProjectCard = () => {
 const Footer = () => {
   return (
     <footer>
-      <div className="contact-me">
-        <h1>CONTACT ME</h1>
-      </div>
-
       <div className="socials">
-        <div>linkedin</div>
-        <div>linkedin</div>
-        <div>linkedin</div>
-        <div>linkedin</div>
+        <a href="https://www.linkedin.com/in/owen-giri-0635b3178/">LinkedIn</a>
+        <a href="https://github.com/owengiri20">Github</a>
+        <a href="#">Email</a>
+        <a href="#">Instagram</a>
       </div>
 
       <div>Handcrafted from scratch by me</div>

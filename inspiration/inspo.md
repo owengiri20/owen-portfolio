@@ -7,3 +7,5 @@ https://kenjimmy.me/
 name loading screen https://www.onyedika.xyz/
 
 https://bonhomme.lol/
+
+https://getcssscan.com/css-box-shadow-examples
