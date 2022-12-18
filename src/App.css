@@ -4,6 +4,12 @@
   align-items: center;
 }
 
+.content-container {
+  width: 1100px;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
 .nav {
   position: fixed;
   left: 5%;
@@ -13,17 +19,19 @@
 #nav-icon {
   cursor: pointer;
   user-select: none;
-  background-color: white;
   display: flex;
+  width: fit-content;
+  background-color: white;
+  padding: 0.7rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-#nav-icon > div {
+#nav-icon > div:first-of-type {
   margin-right: 2rem;
 }
 
 #nav-items {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  box-shadow: black;
   background-color: white;
   padding: 0.5rem;
   margin-top: 0.5rem;
@@ -64,11 +72,6 @@
   height: 28rem;
 }
 
-.about-me {
-  max-width: 1100px;
-  /* height: 50vh; */
-}
-
 .get-to-know-me-description {
   line-height: 1.3em;
   font-size: 1.1rem;
@@ -100,16 +103,10 @@
   border-radius: 10px;
 }
 
-/* expirience */
-.work-experience {
-  width: 1100px;
-  /* height: 70vh; */
-}
-
+/* EXPIRIENCE */
 .experience-card {
   width: 100%;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   border-bottom: 1px solid black;
   padding-bottom: 1rem;
@@ -120,15 +117,17 @@
   width: 20%;
 }
 
-.side-projects {
-  width: 1100px;
+/* SIDE PROJECTS */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .project-card {
-  width: 30%;
+  width: 28%;
   margin-right: 2rem;
   margin-bottom: 2rem;
-  border: 2px solid rgba(0, 0, 0, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .project-image {
@@ -150,15 +149,7 @@ footer {
   width: 100%;
   padding-top: 1rem;
   padding-bottom: 2rem;
-  position: relative;
   margin-top: 10rem;
-}
-
-.quote {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  font-size: 1.4rem;
-  width: 500px;
 }
 
 .socials {
@@ -188,4 +179,45 @@ footer {
   padding: 3rem;
   padding-top: 0rem;
   padding-bottom: 0rem;
+}
+
+@media screen and (max-width: 1450px) {
+  .content-container {
+    width: 800px;
+  }
+  .owen {
+    height: 25rem;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .hero {
+    max-width: 600px;
+  }
+  .owen {
+    height: 16rem;
+  }
+  .about-me-columns {
+    flex-direction: column;
+  }
+  .about-me-columns > div {
+    width: 100%;
+  }
+  .content-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hero {
+    max-width: 90%;
+  }
+
+  .hero > .column-1 > h1 {
+    font-size: 4rem;
+  }
+
+  .owen {
+    height: 12rem;
+  }
 }

@@ -1,12 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import "./App.css";
-import { faEnvelope, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
-import {
-  faFacebook,
-  faGithub,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
+
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import OwenJPG from "./assets/owen.jpg";
 
@@ -116,7 +114,7 @@ const AboutMe = () => {
   ];
 
   return (
-    <div className="about-me">
+    <div className="content-container">
       <div className="about-me-intro">
         <h2>ABOUT ME 🏃 🏋️ 🧋 🥋 ☕ </h2>
       </div>
@@ -172,7 +170,7 @@ const WorkExperience = () => {
   ];
 
   return (
-    <div className="work-experience">
+    <div className="content-container">
       <div className="about-me-intro">
         <h2>WORK EXPERIENCE</h2>
         <p>Ninja Software / Syndicate 2019 - 2022</p>
@@ -222,13 +220,13 @@ const ExperienceCard = ({
 const SideProjects = () => {
   const skills = ["1", "2", "3", "4"];
   return (
-    <div className="side-projects">
+    <div className="content-container">
       <div>
         <h2>SIDE PROJECTS</h2>
         <p>Projects I've done in my spare time</p>
       </div>
 
-      <div className="skills-container">
+      <div className="projects-container">
         {skills.map((s) => {
           return <ProjectCard key={s} />;
         })}
@@ -247,6 +245,7 @@ const ProjectCard = () => {
           backgroundImage: `url(${OwenJPG})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
+          backgroundPosition: "right",
         }}
       ></div>
       <div className="project-summary">
