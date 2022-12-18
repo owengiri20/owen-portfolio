@@ -10,6 +10,7 @@ function App() {
       <AboutMe />
       <WorkExperience />
       <SideProjects />
+      <Footer />
     </div>
   );
 }
@@ -123,8 +124,8 @@ const ExperienceCard = () => {
 const SideProjects = () => {
   const skills = ["1", "2", "3", "4"];
   return (
-    <div className="work-experience">
-      <div className="about-me-intro">
+    <div className="side-projects">
+      <div>
         <h2>SIDE PROJECTS</h2>
         <p>Projects I've done in my spare time</p>
       </div>
@@ -160,6 +161,25 @@ const ProjectCard = () => {
         </p>
       </div>
     </div>
+  );
+};
+
+const Footer = () => {
+  return (
+    <footer>
+      <div className="contact-me">
+        <h1>CONTACT ME</h1>
+      </div>
+
+      <div className="socials">
+        <div>linkedin</div>
+        <div>linkedin</div>
+        <div>linkedin</div>
+        <div>linkedin</div>
+      </div>
+
+      <div>Handcrafted from scratch by me</div>
+    </footer>
   );
 };
 

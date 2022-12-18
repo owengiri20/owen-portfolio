@@ -78,6 +78,10 @@
   width: 20%;
 }
 
+.side-projects {
+  width: 1100px;
+}
+
 .project-card {
   width: 300px;
   margin-right: 2rem;
@@ -86,10 +90,54 @@
 }
 
 .project-image {
-  /* width: 50px; */
   height: 240px;
 }
 
 .project-summary {
   padding: 1rem;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: black;
+  color: white;
+  width: 100%;
+  height: 20vh;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  position: relative;
+  margin-top: 10rem;
+}
+
+.quote {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  width: 500px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  margin-top: 7rem;
+  margin-bottom: 1rem;
+}
+
+.socials > div {
+  margin-left: 1rem;
+}
+
+.contact-me {
+  position: absolute;
+  top: -40px;
+  color: black;
+  background: white;
+  border: 1px solid black;
+  padding: 3rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
 }
