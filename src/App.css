@@ -206,6 +206,9 @@ footer {
   .content-container {
     width: 90%;
   }
+  .project-card {
+    width: 40%;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -214,10 +217,27 @@ footer {
   }
 
   .hero > .column-1 > h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .owen {
-    height: 12rem;
+    height: 11rem;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .hero > .column-1 > h1 {
+    font-size: 2rem;
+  }
+  .hero > .column-1 > h2 {
+    font-size: 1rem;
+  }
+
+  .owen {
+    height: 8rem;
   }
 }
