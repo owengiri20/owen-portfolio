@@ -238,6 +238,17 @@ footer {
   }
 
   .owen {
-    height: 8rem;
+    height: 10rem;
+  }
+
+  .socials {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .socials > a {
+    margin-left: 0;
+    margin-bottom: 1rem;
   }
 }
