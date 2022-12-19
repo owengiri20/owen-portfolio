@@ -102,23 +102,29 @@ const Nav = () => {
           id="nav-items"
           className="theme-picker"
         >
-          <ColorItem backgroundColor="wheat" />
-          <ColorItem backgroundColor="white" />
-          <ColorItem backgroundColor="lightcoral" />
-          <ColorItem backgroundColor="lightgray" />
+          <ColorItem textColor="black" backgroundColor="wheat" />
+          <ColorItem textColor="black" backgroundColor="white" />
+          <ColorItem textColor="black" backgroundColor="lightcoral" />
+          <ColorItem textColor="black" backgroundColor="lightgray" />
+          <ColorItem textColor="white" backgroundColor="#1A1A1A" />
         </div>
       )}
     </div>
   );
 };
 
-const ColorItem = ({ backgroundColor }: { backgroundColor: string }) => {
+const ColorItem = ({
+  backgroundColor,
+  textColor,
+}: {
+  backgroundColor: string;
+  textColor: string;
+}) => {
   const onChangeTheme = () => {
     const r = document.documentElement;
     if (r) {
-      const rs = getComputedStyle(r);
-      console.log(r);
       r.style.setProperty("--background-color", backgroundColor);
+      r.style.setProperty("--text-color", textColor);
     }
   };
   return (
