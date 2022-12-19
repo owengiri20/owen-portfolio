@@ -1,8 +1,7 @@
+import { faEnvelope, faFillDrip } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
 
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
@@ -39,21 +38,18 @@ const Hero = () => {
 };
 
 const Nav = () => {
+  // show nav menu
   const [show, setShow] = useState(false);
-  const [_mode, _setMode] = useState(localStorage.getItem("mode") || "light");
 
-  const toggleMode = () => {
-    const mode = localStorage.getItem("mode") || "light";
-    localStorage.setItem("mode", mode === "light" ? "dark" : "light");
-    const mode2 = localStorage.getItem("mode") || "light";
-    _setMode(mode2);
-  };
+  // show theme menu
+  const [modeMenuOpen, setModeMenuOpen] = useState(false);
 
   return (
     <div className="nav">
       <div id="nav-icon">
         <div
           onClick={() => {
+            setModeMenuOpen(false);
             setShow((prev) => !prev);
           }}
         >
@@ -62,42 +58,75 @@ const Nav = () => {
 
         <div
           onClick={() => {
-            toggleMode();
+            setShow(false);
+            setModeMenuOpen((prev) => !prev);
           }}
         >
-          {_mode === "light" ? (
-            <FontAwesomeIcon size="lg" icon={faMoon} />
-          ) : (
-            <FontAwesomeIcon size="lg" icon={faSun} />
-          )}
+          <FontAwesomeIcon size="lg" icon={faFillDrip} />
         </div>
       </div>
 
-      <div
-        style={{
-          opacity: show ? "1" : "0",
-          transition: "all .1s ease-in",
-        }}
-        id="nav-items"
-      >
-        <div>About Me</div>
-        <div>Experience</div>
-        <div>Side Projects</div>
-        <div>Contact Me</div>
+      {show && (
+        <div
+          style={{
+            opacity: show ? "1" : "0",
+            transition: "all .1s ease-in",
+          }}
+          id="nav-items"
+        >
+          <div>About Me</div>
+          <div>Experience</div>
+          <div>Side Projects</div>
+          <div>Contact Me</div>
 
-        <div className="nav-socials">
-          <div>
-            <FontAwesomeIcon size="lg" icon={faGithub} />
-          </div>
-          <div>
-            <FontAwesomeIcon size="lg" icon={faLinkedin} />
-          </div>
-          <div>
-            <FontAwesomeIcon size="lg" icon={faEnvelope} />
+          <div className="nav-socials">
+            <div>
+              <FontAwesomeIcon size="lg" icon={faGithub} />
+            </div>
+            <div>
+              <FontAwesomeIcon size="lg" icon={faLinkedin} />
+            </div>
+            <div>
+              <FontAwesomeIcon size="lg" icon={faEnvelope} />
+            </div>
           </div>
         </div>
-      </div>
+      )}
+
+      {modeMenuOpen && (
+        <div
+          style={{
+            opacity: modeMenuOpen ? "1" : "0",
+            transition: "all .1s ease-in",
+          }}
+          id="nav-items"
+          className="theme-picker"
+        >
+          <ColorItem backgroundColor="wheat" />
+          <ColorItem backgroundColor="white" />
+          <ColorItem backgroundColor="lightcoral" />
+          <ColorItem backgroundColor="lightgray" />
+        </div>
+      )}
     </div>
+  );
+};
+
+const ColorItem = ({ backgroundColor }: { backgroundColor: string }) => {
+  const onChangeTheme = () => {
+    const r = document.documentElement;
+    if (r) {
+      const rs = getComputedStyle(r);
+      console.log(r);
+      r.style.setProperty("--background-color", backgroundColor);
+    }
+  };
+  return (
+    <div
+      onClick={onChangeTheme}
+      className="theme-circle"
+      style={{ background: backgroundColor }}
+    />
   );
 };
 
@@ -163,7 +192,7 @@ const WorkExperience = () => {
       techs: [
         "Typscript",
         "React",
-        "Baseweb UI",
+        "Material UI",
         "Golang",
         "Postgresql",
         "REST",
