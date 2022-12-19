@@ -156,16 +156,48 @@ const AboutMe = () => {
 const WorkExperience = () => {
   const exps = [
     {
-      name: "Helping Minds - Zen",
-      span: "2020 - 2021",
-      description: "Lorem blah blah blah blahblah blahblah blah",
-      techs: ["HTML", "CSS", "Javascript", "React"],
+      name: "Supremacy.game",
+      span: "2021 - 2022",
+      description:
+        "An epic 24/7 live stream of a battle arena which hosts gigantic AI controlled War machines fighting for their factions, spectators can also join in the fun by supporting the War machines in their faction by utilising  supporter abilities; such as Nukes, airstrikes.",
+      techs: [
+        "Typscript",
+        "React",
+        "Baseweb UI",
+        "Golang",
+        "Postgresql",
+        "REST",
+        "Websockets",
+        "Many more",
+      ],
     },
     {
       name: "Net Zero",
       span: "2020 - 2021",
-      description: "Lorem blah blah blah blahblah blahblah blah",
-      techs: ["HTML", "CSS", "Javascript", "React"],
+      description:
+        "A sustainability reporting platform that helps organizations track and measure their progress towards 'net zero' carbon emissions. Net Zero generates detailed graphs and charts to show sustainability performance, and helps organizations make informed decisions to reduce their carbon footprint.",
+      techs: [
+        "Typscript",
+        "React",
+        "Baseweb UI",
+        "Golang",
+        "Postgresql",
+        "Graphql",
+      ],
+    },
+    {
+      name: "Helping Minds - Zen",
+      span: "2020 - 2022",
+      description:
+        "Zen, the powerful admin tool for the Helping Minds company. With Zen, you can easily track and record important client data, including time sheets, mileage claims, personal information, and calendar meetings. Streamline your administrative tasks and keep all of your client data organized and accessible in one place with Zen.",
+      techs: [
+        "Typscript",
+        "React",
+        "Baseweb UI",
+        "Golang",
+        "Postgresql",
+        "REST",
+      ],
     },
   ];
 
@@ -218,7 +250,14 @@ const ExperienceCard = ({
 };
 
 const SideProjects = () => {
-  const skills = ["1", "2", "3", "4"];
+  const projs = [
+    {
+      name: "TT - Typing test",
+      description: "Typing test built in React",
+      imageURL:
+        "https://user-images.githubusercontent.com/46738862/208370952-35f4e37c-e173-48bc-a143-d2741f86fc2e.png",
+    },
+  ];
   return (
     <div className="content-container">
       <div>
@@ -227,35 +266,45 @@ const SideProjects = () => {
       </div>
 
       <div className="projects-container">
-        {skills.map((s) => {
-          return <ProjectCard key={s} />;
+        {projs.map((p) => {
+          return (
+            <ProjectCard
+              key={p.name}
+              description={p.description}
+              imgURL={p.imageURL}
+              name={p.name}
+            />
+          );
         })}
       </div>
     </div>
   );
 };
 
-const ProjectCard = () => {
+const ProjectCard = ({
+  name,
+  description,
+  imgURL,
+}: {
+  name: string;
+  description: string;
+  imgURL: string;
+}) => {
   return (
     <div className="project-card">
       {/* image */}
       <div
         className="project-image"
         style={{
-          backgroundImage: `url(${OwenJPG})`,
+          backgroundImage: `url(${imgURL})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "right",
+          backgroundPosition: "center",
         }}
       ></div>
       <div className="project-summary">
-        <h3>Project Name</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
-          quos, iure exercitationem facere asperiores veritatis error, ipsum
-          minima, consectetur obcaecati qui! Numquam quasi nihil ipsa
-          consectetur aut quae mollitia quod!
-        </p>
+        <h3>{name}</h3>
+        <p>{description}</p>
       </div>
     </div>
   );

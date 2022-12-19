@@ -118,6 +118,10 @@
   width: 20%;
 }
 
+.experience-card > .summary {
+  width: 100%;
+}
+
 /* SIDE PROJECTS */
 .projects-container {
   display: flex;
