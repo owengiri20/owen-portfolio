@@ -2,9 +2,7 @@ import { faEnvelope, faFillDrip } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import "./App.css";
-
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-
 import OwenJPG from "./assets/owen.jpg";
 
 function App() {
@@ -74,10 +72,10 @@ const Nav = () => {
           }}
           id="nav-items"
         >
-          <div>About Me</div>
-          <div>Experience</div>
-          <div>Side Projects</div>
-          <div>Contact Me</div>
+          <a href="#about-me">About Me</a>
+          <a href="#experience">Experience</a>
+          <a href="#side-projects">Side Projects</a>
+          <a href="#contact">Contact Me</a>
 
           <div className="nav-socials">
             <div>
@@ -149,7 +147,7 @@ const AboutMe = () => {
   ];
 
   return (
-    <div className="content-container">
+    <div id="about-me" className="content-container">
       <div className="about-me-intro">
         <h2>ABOUT ME 🏃 🏋️ 🧋 🥋 ☕ </h2>
       </div>
@@ -237,7 +235,7 @@ const WorkExperience = () => {
   ];
 
   return (
-    <div className="content-container">
+    <div id="experience" className="content-container">
       <div className="about-me-intro">
         <h2>WORK EXPERIENCE</h2>
         <p>Ninja Software / Syndicate 2019 - 2022</p>
@@ -294,7 +292,7 @@ const SideProjects = () => {
     },
   ];
   return (
-    <div className="content-container">
+    <div id="side-projects" className="content-container">
       <div>
         <h2>SIDE PROJECTS</h2>
         <p>Projects I've done in my spare time</p>

@@ -4,6 +4,9 @@
   --text-color: black;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -75,8 +78,11 @@ s {
   cursor: pointer;
 }
 
-#nav-items > div {
+#nav-items > a {
   margin-bottom: 1rem;
+  color: var(--text-color);
+  text-decoration: none;
+  display: block;
 }
 
 .hero {
