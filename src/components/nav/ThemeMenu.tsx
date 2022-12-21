@@ -1,3 +1,4 @@
+import F from "./f.png";
 export const ThemeMenu = ({ isOpen }: { isOpen: boolean }) => {
   return (
     <div
@@ -32,6 +33,17 @@ export const ThemeMenu = ({ isOpen }: { isOpen: boolean }) => {
         textColor="white"
         backgroundColor="#1A1A1A"
         cardBackgroundColor="1A1A1A"
+      />
+
+      <ColorItem
+        textColor="#ADFF2F"
+        backgroundColor="#66FF00"
+        cardBackgroundColor="#66FF00"
+      />
+      <img
+        src={F}
+        alt=""
+        style={{ position: "absolute", width: "100vw", height: "100vh" }}
       />
     </div>
   );
