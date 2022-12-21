@@ -63,6 +63,8 @@ s {
 .theme-circle {
   cursor: pointer;
   margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
   width: 30px;
   height: 30px;
   box-shadow: black 0px 3px 8px;
