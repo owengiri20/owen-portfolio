@@ -109,6 +109,7 @@ s {
 
 .hero-socials > a {
   margin-right: 1rem;
+  color: var(--text-color);
 }
 
 .owen {

@@ -36,14 +36,9 @@ export const ThemeMenu = ({ isOpen }: { isOpen: boolean }) => {
       />
 
       <ColorItem
-        textColor="#ADFF2F"
-        backgroundColor="#66FF00"
-        cardBackgroundColor="#66FF00"
-      />
-      <img
-        src={F}
-        alt=""
-        style={{ position: "absolute", width: "100vw", height: "100vh" }}
+        textColor="white"
+        backgroundColor="#1CAC78"
+        cardBackgroundColor="#1CAC78"
       />
     </div>
   );

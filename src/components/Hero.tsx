@@ -11,10 +11,10 @@ export const Hero = () => {
         <h1>OWEN GIRI</h1>
         <h2>FULL STACK DEVELOPER</h2>
         <div className="hero-socials">
-          <a>
+          <a href="https://github.com/owengiri20">
             <FontAwesomeIcon size="2x" icon={faGithub} />
           </a>
-          <a>
+          <a href="https://www.linkedin.com/in/owen-giri-0635b3178/">
             <FontAwesomeIcon size="2x" icon={faLinkedin} />
           </a>
           <a>
