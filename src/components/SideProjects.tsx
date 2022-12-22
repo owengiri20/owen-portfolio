@@ -1,3 +1,5 @@
+import { SimpleMotion } from "./SimpleMotion";
+
 export const SideProjects = () => {
   const projs = [
     {
@@ -8,25 +10,27 @@ export const SideProjects = () => {
     },
   ];
   return (
-    <div id="side-projects" className="content-container">
-      <div>
-        <h2>SIDE PROJECTS</h2>
-        <p>Projects I've done in my spare time</p>
-      </div>
+    <SimpleMotion>
+      <div id="side-projects" className="content-container">
+        <div>
+          <h2>SIDE PROJECTS</h2>
+          <p>Projects I've done in my spare time</p>
+        </div>
 
-      <div className="projects-container">
-        {projs.map((p) => {
-          return (
-            <ProjectCard
-              key={p.name}
-              description={p.description}
-              imgURL={p.imageURL}
-              name={p.name}
-            />
-          );
-        })}
+        <div className="projects-container">
+          {projs.map((p) => {
+            return (
+              <ProjectCard
+                key={p.name}
+                description={p.description}
+                imgURL={p.imageURL}
+                name={p.name}
+              />
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </SimpleMotion>
   );
 };
 
