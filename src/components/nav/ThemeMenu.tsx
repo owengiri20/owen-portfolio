@@ -1,4 +1,50 @@
-import F from "./f.png";
+export const themes = [
+  {
+    name: "white",
+    textColor: "black",
+    backgroundColor: "white",
+    cardBackgroundColor: "white",
+  },
+  {
+    name: "wheat",
+    textColor: "black",
+    backgroundColor: "wheat",
+    cardBackgroundColor: "white",
+  },
+  {
+    name: "lightcoral",
+    textColor: "black",
+    backgroundColor: "lightcoral",
+    cardBackgroundColor: "white",
+  },
+  {
+    name: "lightgray",
+    textColor: "black",
+    backgroundColor: "lightgray",
+    cardBackgroundColor: "white",
+  },
+  {
+    name: "dark1",
+    textColor: "white",
+    backgroundColor: "#1A1A1A",
+    cardBackgroundColor: "1A1A1A",
+  },
+  {
+    name: "coolgreen",
+    textColor: "white",
+    backgroundColor: "#1CAC78",
+    cardBackgroundColor: "#1CAC78",
+  },
+];
+
+export const getTheme = (name: string) => {
+  const filtered = themes.filter((t) => t.name === name);
+  if (!filtered || filtered.length === 0 || !filtered[0]) {
+    return themes[0];
+  }
+
+  return filtered[0];
+};
 export const ThemeMenu = ({ isOpen }: { isOpen: boolean }) => {
   return (
     <div
@@ -9,56 +55,28 @@ export const ThemeMenu = ({ isOpen }: { isOpen: boolean }) => {
       id="nav-items"
       className="theme-picker"
     >
-      <ColorItem
-        textColor="black"
-        backgroundColor="wheat"
-        cardBackgroundColor="white"
-      />
-      <ColorItem
-        textColor="black"
-        backgroundColor="white"
-        cardBackgroundColor="white"
-      />
-      <ColorItem
-        textColor="black"
-        backgroundColor="lightcoral"
-        cardBackgroundColor="white"
-      />
-      <ColorItem
-        textColor="black"
-        backgroundColor="lightgray"
-        cardBackgroundColor="white"
-      />
-      <ColorItem
-        textColor="white"
-        backgroundColor="#1A1A1A"
-        cardBackgroundColor="1A1A1A"
-      />
-
-      <ColorItem
-        textColor="white"
-        backgroundColor="#1CAC78"
-        cardBackgroundColor="#1CAC78"
-      />
+      {themes.map((t) => {
+        return <ColorItem key={t.name} theme={t} />;
+      })}
     </div>
   );
 };
 
-const ColorItem = ({
-  backgroundColor,
-  textColor,
-  cardBackgroundColor,
-}: {
+interface ThemeObj {
+  name: string;
   backgroundColor: string;
   textColor: string;
   cardBackgroundColor: string;
-}) => {
+}
+const ColorItem = ({ theme }: { theme: ThemeObj }) => {
+  const { backgroundColor, textColor, cardBackgroundColor, name } = theme;
   const onChangeTheme = () => {
     const r = document.documentElement;
     if (r) {
       r.style.setProperty("--background-color", backgroundColor);
       r.style.setProperty("--card-background-color", cardBackgroundColor);
       r.style.setProperty("--text-color", textColor);
+      localStorage.setItem("theme", name);
     }
   };
   return (
