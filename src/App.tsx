@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import "./App.css";
 import "./Animation.css";
+import "./App.css";
 import { AboutMe } from "./components/AboutMe";
 import { Footer } from "./components/Footer";
-import { CoolName, Hero } from "./components/Hero";
+import { Hero } from "./components/Hero";
 import { Nav } from "./components/nav/Nav";
 import { getTheme } from "./components/nav/ThemeMenu";
 import { SideProjects } from "./components/SideProjects";
