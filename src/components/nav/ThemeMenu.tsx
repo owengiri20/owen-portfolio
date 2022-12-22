@@ -1,4 +1,4 @@
-export const themes = [
+const themes = [
   {
     name: "white",
     textColor: "black",
