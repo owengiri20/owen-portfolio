@@ -7,14 +7,17 @@ export const Hero = () => {
   return (
     <div className="hero">
       {/* column 1 */}
-      <div className="column-1">
+      <div className="column-1 drop-in">
         <h1>OWEN GIRI</h1>
         <h2>FULL STACK DEVELOPER</h2>
         <div className="hero-socials">
-          <a href="https://github.com/owengiri20">
+          <a target="_blank" href="https://github.com/owengiri20">
             <FontAwesomeIcon size="2x" icon={faGithub} />
           </a>
-          <a href="https://www.linkedin.com/in/owen-giri-0635b3178/">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/owen-giri-0635b3178/"
+          >
             <FontAwesomeIcon size="2x" icon={faLinkedin} />
           </a>
           <a>
@@ -24,7 +27,7 @@ export const Hero = () => {
       </div>
 
       {/* column 2 */}
-      <div>
+      <div className="drop-in">
         <img src={OwenJPG} className="owen" alt="image of me (:" />
       </div>
     </div>

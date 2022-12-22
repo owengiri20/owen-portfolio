@@ -9,6 +9,7 @@ export const Footer = () => {
       </div>
 
       <div>Handcrafted from scratch by me</div>
+      <div className="copyright">© 2022 Owen Giri</div>
     </footer>
   );
 };
