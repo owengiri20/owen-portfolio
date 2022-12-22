@@ -215,9 +215,9 @@ footer {
 
 .socials > a {
   margin-left: 1rem;
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
-  border: 1px solid white;
+  border: 1px solid var(--text-color);
   padding: 1rem;
   border-radius: 200px;
   cursor: pointer;
