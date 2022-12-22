@@ -3,7 +3,7 @@ import "./App.css";
 import "./Animation.css";
 import { AboutMe } from "./components/AboutMe";
 import { Footer } from "./components/Footer";
-import { Hero } from "./components/Hero";
+import { CoolName, Hero } from "./components/Hero";
 import { Nav } from "./components/nav/Nav";
 import { getTheme } from "./components/nav/ThemeMenu";
 import { SideProjects } from "./components/SideProjects";
@@ -35,6 +35,7 @@ function App() {
     <div className="app-wrapper">
       <Nav />
       <Hero />
+
       <AboutMe />
       <WorkExperience />
       <SideProjects />
@@ -54,56 +55,7 @@ const ScrollThing = () => {
   });
   return (
     <div style={{ height: "90vh", fontSize: "2rem" }}>
-      <h1>scroll</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-        unde alias autem eos distinctio harum tempora veniam, molestiae hic
-        impedit. Debitis quibusdam consectetur ad recusandae nesciunt soluta.
-        Animi, ratione libero.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-        unde alias autem eos distinctio harum tempora veniam, molestiae hic
-        impedit. Debitis quibusdam consectetur ad recusandae nesciunt soluta.
-        Animi, ratione libero.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-        unde alias autem eos distinctio harum tempora veniam, molestiae hic
-        impedit. Debitis quibusdam consectetur ad recusandae nesciunt soluta.
-        Animi, ratione libero.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-        unde alias autem eos distinctio harum tempora veniam, molestiae hic
-        impedit. Debitis quibusdam consectetur ad recusandae nesciunt soluta.
-        Animi, ratione libero.
-      </p>
-      <h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-        unde alias autem eos distinctio harum tempora veniam, molestiae hic
-        impedit. Debitis quibusdam consectetur ad recusandae nesciunt soluta.
-        Animi, ratione libero.
-      </h1>{" "}
-      <h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-        unde alias autem eos distinctio harum tempora veniam, molestiae hic
-        impedit. Debitis quibusdam consectetur ad recusandae nesciunt soluta.
-        Animi, ratione libero.
-      </h1>{" "}
-      <h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-        unde alias autem eos distinctio harum tempora veniam, molestiae hic
-        impedit. Debitis quibusdam consectetur ad recusandae nesciunt soluta.
-        Animi, ratione libero.
-      </h1>{" "}
-      <h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-        unde alias autem eos distinctio harum tempora veniam, molestiae hic
-        impedit. Debitis quibusdam consectetur ad recusandae nesciunt soluta.
-        Animi, ratione libero.
-      </h1>
-      <h1 className="hidden">Hidden</h1>
+      <section></section>
     </div>
   );
 };

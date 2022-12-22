@@ -4,8 +4,7 @@ export const Footer = () => {
       <div className="socials">
         <a href="https://www.linkedin.com/in/owen-giri-0635b3178/">LinkedIn</a>
         <a href="https://github.com/owengiri20">Github</a>
-        <a href="#">Email</a>
-        <a href="#">Instagram</a>
+        <a href="mailto:owengiri20@gmail.com">Email</a>
       </div>
 
       <div>Handcrafted from scratch by me</div>

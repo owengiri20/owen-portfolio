@@ -54,15 +54,15 @@ const NavMenu = ({ isOpen }: { isOpen: boolean }) => {
       <a href="#contact">Contact Me</a>
 
       <div className="nav-socials">
-        <div>
+        <a target="_blank" href="https://github.com/owengiri20">
           <FontAwesomeIcon size="lg" icon={faGithub} />
-        </div>
-        <div>
+        </a>
+        <a href="https://www.linkedin.com/in/owen-giri-0635b3178/">
           <FontAwesomeIcon size="lg" icon={faLinkedin} />
-        </div>
-        <div>
+        </a>
+        <a href="mailto:owengiri20@gmail.com">
           <FontAwesomeIcon size="lg" icon={faEnvelope} />
-        </div>
+        </a>
       </div>
     </div>
   );

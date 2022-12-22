@@ -20,7 +20,7 @@ export const Hero = () => {
           >
             <FontAwesomeIcon size="2x" icon={faLinkedin} />
           </a>
-          <a>
+          <a href="mailto:owengiri20@gmail.com">
             <FontAwesomeIcon size="2x" icon={faEnvelope} />
           </a>
         </div>
@@ -30,6 +30,15 @@ export const Hero = () => {
       <div className="drop-in">
         <img src={OwenJPG} className="owen" alt="image of me (:" />
       </div>
+    </div>
+  );
+};
+
+export const CoolName = ({ name }: { name: string }) => {
+  return (
+    <div className="content">
+      <h2>{name}</h2>
+      <h2>{name}</h2>
     </div>
   );
 };
