@@ -332,3 +332,42 @@ footer {
     margin-bottom: 1rem;
   }
 }
+
+* {
+  box-sizing: border-box;
+}
+.timeline {
+  position: relative;
+  max-width: 1200px;
+}
+
+.container {
+  position: relative;
+  padding: 10px 50px;
+  width: 50%;
+  background: #391b1b;
+}
+
+.textbox {
+  padding: 30px;
+  background: #9d3838;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.timeline::after {
+  content: " ";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 50%;
+  margin: -3px;
+}

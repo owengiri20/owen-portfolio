@@ -38,6 +38,8 @@ function App() {
 
       <AboutMe />
       <WorkExperience />
+      <ScrollThing />
+
       <SideProjects />
       <Footer />
     </div>
@@ -45,17 +47,28 @@ function App() {
 }
 
 const ScrollThing = () => {
-  const obs = new IntersectionObserver((e) => {
-    console.log(e);
-  });
-
-  const hiddenItems = document.querySelectorAll(".hidden");
-  hiddenItems.forEach((i) => {
-    obs.observe(i);
-  });
+  const items = ["google", "amazon", "other"];
   return (
-    <div style={{ height: "90vh", fontSize: "2rem" }}>
-      <section></section>
+    <div className="timeline">
+      {items.map((item, i) => {
+        return (
+          <div
+            key={item}
+            className={`container ${i % 2 === 0 ? "right" : "left"}`}
+          >
+            <div className="textbox">
+              <h2>{item}</h2>
+              <small>2019-2020</small>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque
+                impedit voluptates aut nam quis asperiores cum doloremque iste
+                fuga quidem, quaerat repellat, beatae nulla eius possimus quod
+                quas! Assumenda, praesentium.
+              </p>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 };
