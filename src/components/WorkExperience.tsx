@@ -1,3 +1,6 @@
+import { motion, MotionConfig, Variants } from "framer-motion";
+import { SimpleMotion } from "./SimpleMotion";
+
 const exps = [
   {
     name: "Supremacy.game",
@@ -75,14 +78,16 @@ const ExperienceCard = ({
   techs: string[];
 }) => {
   return (
-    <div className="experience-card">
-      <div className="time-span">{span}</div>
+    <SimpleMotion>
+      <div className="experience-card">
+        <div className="time-span">{span}</div>
 
-      <div className="summary">
-        <h3>{name}</h3>
-        <p>{description}</p>
-        <div>{techs.join(" | ")}</div>
+        <div className="summary">
+          <h3>{name}</h3>
+          <p>{description}</p>
+          <div>{techs.join(" | ")}</div>
+        </div>
       </div>
-    </div>
+    </SimpleMotion>
   );
 };
