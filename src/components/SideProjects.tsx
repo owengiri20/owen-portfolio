@@ -12,50 +12,27 @@ export const SideProjects = () => {
   return (
     <div id="side-projects" className="content-container">
       <SimpleMotion>
-        <h2>PROJECTS</h2>
+        <div>
+          <h2 className="content-title">PROJECTS</h2>
 
-        <div className="projects-container">
-          {projs.map((p) => {
-            return (
-              <ProjectCard
-                key={p.name}
-                description={p.description}
-                imgURL={p.imageURL}
-                name={p.name}
-              />
-            );
-          })}
+          <div className="projects-container">
+            <ProjectCard name="" imgURL="" />
+            <ProjectCard name="" imgURL="" />
+            <ProjectCard name="" imgURL="" />
+            <ProjectCard name="" imgURL="" />
+          </div>
+          <div className="project-card-long"></div>
         </div>
       </SimpleMotion>
     </div>
   );
 };
 
-const ProjectCard = ({
-  name,
-  description,
-  imgURL,
-}: {
-  name: string;
-  description: string;
-  imgURL: string;
-}) => {
+const ProjectCard = ({ name, imgURL }: { name: string; imgURL: string }) => {
   return (
     <div className="project-card">
-      {/* image */}
-      <div
-        className="project-image"
-        style={{
-          backgroundImage: `url(${imgURL})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-        }}
-      ></div>
-      <div className="project-summary">
-        <h3>{name}</h3>
-        <p>{description}</p>
-      </div>
+      <h3>NAME</h3>
+      <p>View More</p>
     </div>
   );
 };

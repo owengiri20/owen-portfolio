@@ -22,7 +22,7 @@ export const AboutMe = () => {
     <div key="about" id="about-me" className="content-container">
       <SimpleMotion>
         <div className="about-me-intro">
-          <h2>ABOUT ME</h2>
+          <h2 className="content-title">ABOUT ME</h2>
         </div>
 
         <div className="about-me-columns">

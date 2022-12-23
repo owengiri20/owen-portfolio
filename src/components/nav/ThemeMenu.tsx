@@ -21,13 +21,6 @@ const themes = [
     cardBackgroundColor: "white",
   },
   {
-    name: "lightgray",
-    textColor: "black",
-    backgroundColor: "lightgray",
-    footerBackgroundColor: "lightgray",
-    cardBackgroundColor: "white",
-  },
-  {
     name: "dark1",
     textColor: "white",
     backgroundColor: "#1A1A1A",

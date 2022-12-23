@@ -52,7 +52,7 @@ export const WorkExperience = () => {
   return (
     <div id="experience" className="content-container">
       <div className="about-me-intro">
-        <h2>EXPERIENCE</h2>
+        <h2 className="content-title">EXPERIENCE</h2>
         <p>Ninja Software / Syndicate 2019 - 2022</p>
       </div>
 
@@ -102,7 +102,7 @@ const ExperienceCard = ({
 export const ExperienceTimeline = () => {
   return (
     <div className="content-container">
-      <h2>EXPERIENCE</h2>
+      <h2 className="content-title">EXPERIENCE</h2>
 
       <div className="timeline">
         {exps.map((ex, i) => {

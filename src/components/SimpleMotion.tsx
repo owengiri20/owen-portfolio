@@ -3,6 +3,10 @@ import React, { ReactNode } from "react";
 const cardVariants: Variants = {
   offscreen: {
     opacity: 0,
+    transition: {
+      type: "tween",
+      duration: 0.8,
+    },
   },
   onscreen: {
     opacity: 1,
