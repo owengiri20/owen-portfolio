@@ -8,7 +8,10 @@ import { Nav } from "./components/nav/Nav";
 import { getTheme } from "./components/nav/ThemeMenu";
 import { SideProjects } from "./components/SideProjects";
 import { SimpleMotion } from "./components/SimpleMotion";
-import { WorkExperience } from "./components/WorkExperience";
+import {
+  ExperienceTimeline,
+  WorkExperience,
+} from "./components/WorkExperience";
 
 function App() {
   // set the theme
@@ -38,42 +41,13 @@ function App() {
       <Hero />
 
       <AboutMe />
-      <WorkExperience />
-      <ScrollThing />
-
       <SideProjects />
+
+      <ExperienceTimeline />
+
       <Footer />
     </div>
   );
 }
-
-const ScrollThing = () => {
-  const items = ["google", "amazon", "other"];
-  return (
-    <div className="timeline">
-      {items.map((item, i) => {
-        return (
-          <SimpleMotion>
-            <div
-              key={item}
-              className={`container ${i % 2 === 0 ? "right" : "left"}`}
-            >
-              <div className="textbox">
-                <h2>{item}</h2>
-                <small>2019-2020</small>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Itaque impedit voluptates aut nam quis asperiores cum
-                  doloremque iste fuga quidem, quaerat repellat, beatae nulla
-                  eius possimus quod quas! Assumenda, praesentium.
-                </p>
-              </div>
-            </div>
-          </SimpleMotion>
-        );
-      })}
-    </div>
-  );
-};
 
 export default App;

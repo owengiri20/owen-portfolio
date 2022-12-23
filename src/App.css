@@ -62,9 +62,7 @@ body {
 }
 .theme-circle {
   cursor: pointer;
-  margin-left: 1rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+  margin: 0.5rem;
   width: 30px;
   height: 30px;
   box-shadow: black 0px 3px 8px;
@@ -152,7 +150,7 @@ body {
 }
 
 .skill-tag {
-  margin: 1rem;
+  margin: 0.4rem 1rem;
   margin-left: 0;
   background: rgba(0, 0, 0, 0.1);
   padding: 0.8rem;
@@ -246,6 +244,47 @@ footer {
   padding-bottom: 0rem;
 }
 
+/* TIMELINE */
+* {
+  box-sizing: border-box;
+}
+.timeline {
+  position: relative;
+  max-width: 1200px;
+}
+
+.container {
+  position: relative;
+  padding: 0px 1rem;
+  width: 50%;
+  margin-top: 3rem;
+}
+
+.textbox {
+  padding: 25px;
+  background: var(--card-background-color);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.timeline::after {
+  content: " ";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: var(--text-color);
+  top: 0;
+  left: 50%;
+  margin: -3px;
+}
+
 @media screen and (max-width: 1450px) {
   .content-container {
     width: 800px;
@@ -273,6 +312,24 @@ footer {
   }
   .project-card {
     width: 40%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    width: 100%;
+  }
+
+  .left {
+    left: 0;
+  }
+
+  .right {
+    left: 0%;
+  }
+
+  .timeline::after {
+    left: 0%;
   }
 }
 
@@ -332,43 +389,4 @@ footer {
     margin-left: 0;
     margin-bottom: 1rem;
   }
-}
-
-* {
-  box-sizing: border-box;
-}
-.timeline {
-  position: relative;
-  max-width: 1200px;
-}
-
-.container {
-  position: relative;
-  padding: 10px 50px;
-  width: 50%;
-  background: #391b1b;
-}
-
-.textbox {
-  padding: 30px;
-  background: #9d3838;
-}
-
-.left {
-  left: 0;
-}
-
-.right {
-  left: 50%;
-}
-
-.timeline::after {
-  content: " ";
-  position: absolute;
-  width: 6px;
-  height: 100%;
-  background: #fff;
-  top: 0;
-  left: 50%;
-  margin: -3px;
 }

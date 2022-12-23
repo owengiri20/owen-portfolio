@@ -34,7 +34,14 @@ const exps = [
   },
   {
     name: "Helping Minds - Zen",
-    span: "2020 - 2022",
+    span: "2020 - 2021",
+    description:
+      "Zen, the powerful admin tool for the Helping Minds company. With Zen, you can easily track and record important client data, including time sheets, mileage claims, personal information, and calendar meetings. Streamline your administrative tasks and keep all of your client data organized and accessible in one place with Zen.",
+    techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
+  },
+  {
+    name: "Ninja Software Internship",
+    span: "2019",
     description:
       "Zen, the powerful admin tool for the Helping Minds company. With Zen, you can easily track and record important client data, including time sheets, mileage claims, personal information, and calendar meetings. Streamline your administrative tasks and keep all of your client data organized and accessible in one place with Zen.",
     techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
@@ -45,7 +52,7 @@ export const WorkExperience = () => {
   return (
     <div id="experience" className="content-container">
       <div className="about-me-intro">
-        <h2>WORK EXPERIENCE</h2>
+        <h2>EXPERIENCE</h2>
         <p>Ninja Software / Syndicate 2019 - 2022</p>
       </div>
 
@@ -84,6 +91,59 @@ const ExperienceCard = ({
 
         <div className="summary">
           <h3>{name}</h3>
+          <p>{description}</p>
+          <div>{techs.join(" | ")}</div>
+        </div>
+      </div>
+    </SimpleMotion>
+  );
+};
+
+export const ExperienceTimeline = () => {
+  return (
+    <div className="content-container">
+      <h2>EXPERIENCE</h2>
+
+      <div className="timeline">
+        {exps.map((ex, i) => {
+          return (
+            <TimeLineCard
+              name={ex.name}
+              span={ex.span}
+              description={ex.description}
+              techs={ex.techs}
+              index={i}
+              key={ex.name}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+const TimeLineCard = ({
+  name,
+  span,
+  description,
+  techs,
+  index,
+}: {
+  name: string;
+  span: string;
+  description: string;
+  techs: string[];
+  index: number;
+}) => {
+  return (
+    <SimpleMotion>
+      <div
+        key={name}
+        className={`container ${index % 2 === 0 ? "left" : "right"}`}
+      >
+        <div className="textbox">
+          <small>{span}</small>
+          <h2>{name}</h2>
           <p>{description}</p>
           <div>{techs.join(" | ")}</div>
         </div>

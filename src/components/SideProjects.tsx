@@ -10,12 +10,9 @@ export const SideProjects = () => {
     },
   ];
   return (
-    <SimpleMotion>
-      <div id="side-projects" className="content-container">
-        <div>
-          <h2>SIDE PROJECTS</h2>
-          <p>Projects I've done in my spare time</p>
-        </div>
+    <div id="side-projects" className="content-container">
+      <SimpleMotion>
+        <h2>PROJECTS</h2>
 
         <div className="projects-container">
           {projs.map((p) => {
@@ -29,8 +26,8 @@ export const SideProjects = () => {
             );
           })}
         </div>
-      </div>
-    </SimpleMotion>
+      </SimpleMotion>
+    </div>
   );
 };
 
