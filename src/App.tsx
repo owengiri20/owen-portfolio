@@ -6,12 +6,8 @@ import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { Nav } from "./components/nav/Nav";
 import { getTheme } from "./components/nav/ThemeMenu";
-import { SideProjects } from "./components/SideProjects";
-import { SimpleMotion } from "./components/SimpleMotion";
-import {
-  ExperienceTimeline,
-  WorkExperience,
-} from "./components/WorkExperience";
+import { ProjectCarousel } from "./components/SideProjects";
+import { ExperienceTimeline } from "./components/WorkExperience";
 
 function App() {
   // set the theme
@@ -39,12 +35,9 @@ function App() {
     <div className="app-wrapper">
       <Nav />
       <Hero />
-
       <AboutMe />
-      <SideProjects />
-
+      <ProjectCarousel />
       <ExperienceTimeline />
-
       <Footer />
     </div>
   );
