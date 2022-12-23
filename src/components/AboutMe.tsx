@@ -22,12 +22,12 @@ export const AboutMe = () => {
     <div key="about" id="about-me" className="content-container">
       <SimpleMotion>
         <div className="about-me-intro">
-          <h2>ABOUT ME 🏃 🏋️ 🧋 🥋 ☕ </h2>
+          <h2>ABOUT ME</h2>
         </div>
 
         <div className="about-me-columns">
           <div>
-            <h3>GET TO KNOW ME</h3>
+            <h3>GET TO KNOW ME 🏃 🏋️ 🧋 🥋 ☕</h3>
             <p className="get-to-know-me-description">
               Hi, my name is Owen and I am a full stack software developer. In
               my professional life, I am skilled in a variety of programming
