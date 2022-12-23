@@ -1,5 +1,6 @@
 import { SimpleMotion } from "./SimpleMotion";
 import NexusWebp from "../assets/nexus.webp";
+import SupHero from "../assets/supremacy-hero.png";
 
 const projs = [
   {
@@ -38,6 +39,38 @@ export const ProjectCarousel = () => {
             description={""}
             imageURL={projs[0].imageURL}
             isSelected={false}
+          />
+        </div>
+
+        <div className="all-projects-btn">
+          <h1>VIEW ALL</h1>
+          <div
+            style={{
+              backgroundImage: `url(${NexusWebp})`,
+              backgroundSize: "cover",
+              backgroundPosition: "right",
+            }}
+          />
+          <div
+            style={{
+              backgroundImage: `url(${SupHero})`,
+              backgroundSize: "cover",
+              backgroundPosition: "left",
+            }}
+          />
+          <div
+            style={{
+              backgroundImage: `url(${NexusWebp})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />{" "}
+          <div
+            style={{
+              backgroundImage: `url(${SupHero})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
           />
         </div>
       </div>

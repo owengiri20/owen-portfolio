@@ -19,6 +19,13 @@ const exps = [
     ],
   },
   {
+    name: "HotSource",
+    span: "2021 - 2022",
+    description:
+      "Zen, the powerful admin tool for the Helping Minds company. With Zen, you can easily track and record important client data, including time sheets, mileage claims, personal information, and calendar meetings. Streamline your administrative tasks and keep all of your client data organized and accessible in one place with Zen.",
+    techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
+  },
+  {
     name: "Net Zero",
     span: "2020 - 2021",
     description:

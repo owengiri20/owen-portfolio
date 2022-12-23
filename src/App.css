@@ -459,3 +459,24 @@ footer {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 1rem;
 }
+
+.all-projects-btn {
+  position: relative;
+  width: 98.5%;
+  margin-top: 1rem;
+  filter: brightness(40%);
+  display: flex;
+  height: 90px;
+}
+
+.all-projects-btn div {
+  height: 100%;
+  width: 50%;
+}
+
+.all-projects-btn h1 {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  text-align: center;
+}
