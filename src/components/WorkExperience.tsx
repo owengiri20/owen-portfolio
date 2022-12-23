@@ -40,6 +40,27 @@ const exps = [
     techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
   },
   {
+    name: "Sideeffect",
+    span: "2019 - 2020",
+    description:
+      "Zen, the powerful admin tool for the Helping Minds company. With Zen, you can easily track and record important client data, including time sheets, mileage claims, personal information, and calendar meetings. Streamline your administrative tasks and keep all of your client data organized and accessible in one place with Zen.",
+    techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
+  },
+  {
+    name: "Ridefair.io",
+    span: "2019 - 2020",
+    description:
+      "Zen, the powerful admin tool for the Helping Minds company. With Zen, you can easily track and record important client data, including time sheets, mileage claims, personal information, and calendar meetings. Streamline your administrative tasks and keep all of your client data organized and accessible in one place with Zen.",
+    techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
+  },
+  {
+    name: "Game Changer Awards (Volenteer judge)",
+    span: "2019",
+    description:
+      "Zen, the powerful admin tool for the Helping Minds company. With Zen, you can easily track and record important client data, including time sheets, mileage claims, personal information, and calendar meetings. Streamline your administrative tasks and keep all of your client data organized and accessible in one place with Zen.",
+    techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
+  },
+  {
     name: "Ninja Software Internship",
     span: "2019",
     description:
