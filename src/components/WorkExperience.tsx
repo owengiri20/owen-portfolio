@@ -1,9 +1,8 @@
-import { motion, MotionConfig, Variants } from "framer-motion";
 import { SimpleMotion } from "./SimpleMotion";
 
 const exps = [
   {
-    name: "Supremacy.game",
+    name: "Ninja Syndicate",
     span: "2021 - 2022",
     description:
       "An epic 24/7 live stream of a battle arena which hosts gigantic AI controlled War machines fighting for their factions, spectators can also join in the fun by supporting the War machines in their faction by utilising  supporter abilities; such as Nukes, airstrikes.",
@@ -19,47 +18,13 @@ const exps = [
     ],
   },
   {
-    name: "HotSource",
+    name: "Ninja Software",
     span: "2021 - 2022",
     description:
       "Zen, the powerful admin tool for the Helping Minds company. With Zen, you can easily track and record important client data, including time sheets, mileage claims, personal information, and calendar meetings. Streamline your administrative tasks and keep all of your client data organized and accessible in one place with Zen.",
     techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
   },
-  {
-    name: "Net Zero",
-    span: "2020 - 2021",
-    description:
-      "A sustainability reporting platform that helps organizations track and measure their progress towards 'net zero' carbon emissions. Net Zero generates detailed graphs and charts to show sustainability performance, and helps organizations make informed decisions to reduce their carbon footprint.",
-    techs: [
-      "Typscript",
-      "React",
-      "Baseweb UI",
-      "Golang",
-      "Postgresql",
-      "Graphql",
-    ],
-  },
-  {
-    name: "Helping Minds - Zen",
-    span: "2020 - 2021",
-    description:
-      "Zen, the powerful admin tool for the Helping Minds company. With Zen, you can easily track and record important client data, including time sheets, mileage claims, personal information, and calendar meetings. Streamline your administrative tasks and keep all of your client data organized and accessible in one place with Zen.",
-    techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
-  },
-  {
-    name: "Sideeffect",
-    span: "2019 - 2020",
-    description:
-      "Zen, the powerful admin tool for the Helping Minds company. With Zen, you can easily track and record important client data, including time sheets, mileage claims, personal information, and calendar meetings. Streamline your administrative tasks and keep all of your client data organized and accessible in one place with Zen.",
-    techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
-  },
-  {
-    name: "Ridefair.io",
-    span: "2019 - 2020",
-    description:
-      "Zen, the powerful admin tool for the Helping Minds company. With Zen, you can easily track and record important client data, including time sheets, mileage claims, personal information, and calendar meetings. Streamline your administrative tasks and keep all of your client data organized and accessible in one place with Zen.",
-    techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
-  },
+
   {
     name: "Game Changer Awards (Volenteer judge)",
     span: "2019",
@@ -70,6 +35,13 @@ const exps = [
   {
     name: "Ninja Software Internship",
     span: "2019",
+    description:
+      "Zen, the powerful admin tool for the Helping Minds company. With Zen, you can easily track and record important client data, including time sheets, mileage claims, personal information, and calendar meetings. Streamline your administrative tasks and keep all of your client data organized and accessible in one place with Zen.",
+    techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
+  },
+  {
+    name: "North Metropolitain TAFE",
+    span: "2018",
     description:
       "Zen, the powerful admin tool for the Helping Minds company. With Zen, you can easily track and record important client data, including time sheets, mileage claims, personal information, and calendar meetings. Streamline your administrative tasks and keep all of your client data organized and accessible in one place with Zen.",
     techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],

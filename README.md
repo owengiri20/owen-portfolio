@@ -15,6 +15,8 @@ TODO
 - add tasks to experience
 - add logos to experice
 
+- add real data to experience component
+
 BACKBURNER
 
 - typewritter effect

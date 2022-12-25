@@ -412,57 +412,58 @@ footer {
 }
 .carousel-card {
   height: 50vh;
-  width: 20%;
+  width: 32%;
   background-color: var(--card-background-color);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-right: 1rem;
   filter: brightness(45%);
-  transition: all ease 0.5s;
   cursor: pointer;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
+  transition: all ease 0.3s;
 }
 
 .selected {
   width: 85%;
+  transition: all ease 0.3s;
+}
+
+/* .selected {
+  width: 42%;
+} */
+
+.carousel-card:hover {
+  filter: brightness(80%);
 }
 
 .carousel-card:hover {
   filter: brightness(80%);
-  transition: all ease 0.5s;
-}
-
-.carousel-card:hover > .carousel-bottom {
-  opacity: 1;
-}
-
-.carousel-card:hover {
-  filter: brightness(80%);
-  transition: all ease 0.5s;
 }
 
 .project-title {
   font-size: 2rem;
   margin: 0;
   color: white;
-  transition: all ease 0.5s;
-  transition-delay: 0.3s;
 }
 
 .click-to-view {
   font-size: 1rem;
   margin: 0;
   color: white;
-  transition: all ease 0.5s;
-  transition-delay: 0.3s;
 }
 
 .carousel-bottom {
-  transition: all ease 0.5s;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 1rem;
+  transition: all ease 0.3s;
+}
+
+.carousel-card:hover > .carousel-bottom {
+  opacity: 1;
+  transition-delay: 2s;
+  transition: all ease 0.3s;
 }
 
 .all-projects-btn {
@@ -489,6 +490,7 @@ footer {
   cursor: pointer;
   margin: 0;
   padding: 1.5rem 1rem;
+  color: white;
 }
 
 .all-projects-btn h1:hover {

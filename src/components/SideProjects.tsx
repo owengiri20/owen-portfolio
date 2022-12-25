@@ -1,14 +1,29 @@
 import { SimpleMotion } from "./SimpleMotion";
 import NexusWebp from "../assets/nexus.webp";
 import SupHero from "../assets/supremacy-hero.png";
-
-const projs = [
+import { useState } from "react";
+interface Project {
+  slug: string;
+  name: string;
+  description: string;
+  imageURL: string;
+}
+const projs: Project[] = [
   {
-    name: "TT - Typing test",
+    slug: "supremacy",
+    name: "Supremacy: Battle Arena",
     description: "Typing test built in React",
     imageURL: NexusWebp,
   },
   {
+    slug: "zen",
+    name: "Zen - Helping Minds",
+    description: "Typing test built in React",
+    imageURL:
+      "https://user-images.githubusercontent.com/46738862/208370952-35f4e37c-e173-48bc-a143-d2741f86fc2e.png",
+  },
+  {
+    slug: "tt",
     name: "TT - Typing test",
     description: "Typing test built in React",
     imageURL:
@@ -16,30 +31,38 @@ const projs = [
   },
 ];
 
+export const GetProject = (slug: string) => {
+  const filtered = projs.filter((p) => p.slug === slug);
+  if (!filtered || filtered.length === 0 || !filtered[0]) {
+    console.log("project does not exist");
+
+    return undefined;
+  }
+
+  return filtered[0];
+};
+
 export const ProjectCarousel = () => {
+  const [selected, setSelected] = useState(projs[0].name);
   return (
     <div className="content-container">
       <SimpleMotion>
         <h2 className="content-title">PROJECTS</h2>
         <div className="carousel">
-          <ProjectCarouselCard
-            name={"Supremacy: Battle Arena"}
-            description={""}
-            imageURL={projs[0].imageURL}
-            isSelected={true}
-          />
-          <ProjectCarouselCard
-            name={""}
-            description={""}
-            imageURL={projs[0].imageURL}
-            isSelected={false}
-          />
-          <ProjectCarouselCard
-            name={""}
-            description={""}
-            imageURL={projs[0].imageURL}
-            isSelected={false}
-          />
+          {projs.map((p) => {
+            return (
+              <ProjectCarouselCard
+                key={p.name}
+                name={p.name}
+                description={""}
+                imageURL={projs[0].imageURL}
+                isSelected={p.name === selected}
+                onClick={() => {
+                  setSelected(p.name);
+                }}
+              />
+            );
+          })}
         </div>
 
         <div className="all-projects-btn">
@@ -84,14 +107,18 @@ export const ProjectCarouselCard = ({
   description,
   imageURL,
   isSelected,
+  onClick,
 }: {
   name: string;
   description: string;
   imageURL: string;
   isSelected: boolean;
+
+  onClick: () => void;
 }) => {
   return (
     <div
+      onClick={onClick}
       className={"carousel-card " + (isSelected ? "selected" : "")}
       style={{
         backgroundImage: `url(${imageURL})`,
