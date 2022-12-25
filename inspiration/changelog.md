@@ -1,3 +1,27 @@
+commit 379e6def87fb1299e76774837a66eda2846a2f8a
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Sat Dec 24 01:46:07 2022 +0800
+
+    add more experience
+
+commit 9ae0ccb0713012b90e380ea73d4c9c2f5f916dd3
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Sat Dec 24 01:41:53 2022 +0800
+
+    a cooler looking project section, inspired by felix
+
+commit 366b76cb330a5440a79067e6d5faad45c9981bbb
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Fri Dec 23 15:18:13 2022 +0800
+
+    [WIP] reworking projects section
+
+commit 73953dcfc1381fb6e03c402c9420a6c6723b2c2a
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Fri Dec 23 10:20:23 2022 +0800
+
+    relocate emojis
+
 commit e592a5700782dd78dffa817a355c5123825587e2
 Merge: 4ad95de c02c6ea
 Author: owengiri20 <owengiri20@gmail.com>

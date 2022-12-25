@@ -383,6 +383,10 @@ footer {
     font-size: 1rem;
   }
 
+  .content-title {
+    font-size: 2rem;
+  }
+
   .owen {
     height: 10rem;
   }
@@ -404,6 +408,7 @@ footer {
 
 .carousel {
   display: flex;
+  width: 100%;
 }
 .carousel-card {
   height: 50vh;
@@ -464,7 +469,6 @@ footer {
   position: relative;
   width: 98.5%;
   margin-top: 1rem;
-  filter: brightness(40%);
   display: flex;
   height: 90px;
 }
@@ -477,6 +481,28 @@ footer {
 .all-projects-btn h1 {
   position: absolute;
   width: 100%;
+  height: 100%;
   z-index: 99;
   text-align: center;
+  opacity: 0.5;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  margin: 0;
+  padding: 1.5rem 1rem;
+}
+
+.all-projects-btn h1:hover {
+  opacity: 1;
+  border: 1px solid white;
+  transition: all ease 0.3s;
+}
+
+.all-projects-btn-overlay {
+  background-color: black;
+  position: absolute;
+  width: 100% !important;
+  left: 0;
+  right: 0;
+  opacity: 0.8;
+  cursor: pointer;
 }

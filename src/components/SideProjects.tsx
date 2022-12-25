@@ -18,8 +18,8 @@ const projs = [
 
 export const ProjectCarousel = () => {
   return (
-    <SimpleMotion>
-      <div className="content-container">
+    <div className="content-container">
+      <SimpleMotion>
         <h2 className="content-title">PROJECTS</h2>
         <div className="carousel">
           <ProjectCarouselCard
@@ -43,6 +43,7 @@ export const ProjectCarousel = () => {
         </div>
 
         <div className="all-projects-btn">
+          <div className="all-projects-btn-overlay"></div>
           <h1>VIEW ALL</h1>
           <div
             style={{
@@ -73,8 +74,8 @@ export const ProjectCarousel = () => {
             }}
           />
         </div>
-      </div>
-    </SimpleMotion>
+      </SimpleMotion>
+    </div>
   );
 };
 

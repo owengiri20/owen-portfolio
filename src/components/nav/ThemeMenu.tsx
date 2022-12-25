@@ -7,6 +7,13 @@ const themes = [
     cardBackgroundColor: "white",
   },
   {
+    name: "dark1",
+    textColor: "white",
+    backgroundColor: "#1A1A1A",
+    footerBackgroundColor: "#1A1A1A",
+    cardBackgroundColor: "1A1A1A",
+  },
+  {
     name: "wheat",
     textColor: "black",
     backgroundColor: "wheat",
@@ -20,13 +27,7 @@ const themes = [
     footerBackgroundColor: "lightcoral",
     cardBackgroundColor: "white",
   },
-  {
-    name: "dark1",
-    textColor: "white",
-    backgroundColor: "#1A1A1A",
-    footerBackgroundColor: "#1A1A1A",
-    cardBackgroundColor: "1A1A1A",
-  },
+
   {
     name: "coolgreen",
     textColor: "white",
