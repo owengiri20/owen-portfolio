@@ -5,7 +5,7 @@ import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { Nav } from "./components/nav/Nav";
 import { getTheme } from "./components/nav/ThemeMenu";
-import { ProjectCarousel } from "./components/SideProjects";
+import { ProjectCarousel } from "./components/projects/Projects";
 import { ExperienceTimeline } from "./components/WorkExperience";
 import {
   BrowserRouter as Router,
@@ -15,7 +15,7 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 import { useEffect } from "react";
-import { ProjectPage } from "./components/ProjectPage";
+import { ProjectPage } from "./components/projects/ProjectPage";
 
 function App() {
   // set the theme

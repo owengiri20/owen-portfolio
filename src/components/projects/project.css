@@ -1,0 +1,46 @@
+.project-hero {
+  width: 100vw;
+  height: 60vh;
+  position: relative;
+  transition: all ease 0.3s;
+}
+
+.project-hero h2 {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+}
+
+.project-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-content-inner {
+  width: 80%;
+  max-width: 1100px;
+}
+
+.project-content-inner h3 {
+  font-size: 2rem;
+}
+
+ul {
+  padding: 0;
+  list-style-position: inside;
+}
+li {
+  list-style-type: square;
+  font-size: 1.2rem;
+}
+
+.project-images {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.project-images img {
+  width: 45%;
+  margin-right: 1rem;
+}

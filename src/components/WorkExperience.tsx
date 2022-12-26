@@ -1,11 +1,18 @@
 import { SimpleMotion } from "./SimpleMotion";
-
-const exps = [
+interface Experience {
+  name: string;
+  span: string;
+  role: string;
+  description: string;
+  techs: string[];
+}
+const exps: Experience[] = [
   {
     name: "Ninja Syndicate",
+    role: "",
     span: "2021 - 2022",
     description:
-      "An epic 24/7 live stream of a battle arena which hosts gigantic AI controlled War machines fighting for their factions, spectators can also join in the fun by supporting the War machines in their faction by utilising  supporter abilities; such as Nukes, airstrikes.",
+      "At the start of 2021, the Supremacy project kicked off, and now Ninja Software is tranforming from a consultant company to a full fledge gaming studio",
     techs: [
       "Typscript",
       "React",
@@ -19,85 +26,47 @@ const exps = [
   },
   {
     name: "Ninja Software",
-    span: "2021 - 2022",
+    role: "",
+    span: "2019 - 2022",
     description:
-      "Zen, the powerful admin tool for the Helping Minds company. With Zen, you can easily track and record important client data, including time sheets, mileage claims, personal information, and calendar meetings. Streamline your administrative tasks and keep all of your client data organized and accessible in one place with Zen.",
+      "Nearing the end of 2019, I landed a full time role as a junior software developer.",
     techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
   },
 
   {
     name: "Game Changer Awards (Volenteer judge)",
+    role: "",
     span: "2019",
     description:
-      "Zen, the powerful admin tool for the Helping Minds company. With Zen, you can easily track and record important client data, including time sheets, mileage claims, personal information, and calendar meetings. Streamline your administrative tasks and keep all of your client data organized and accessible in one place with Zen.",
+      "As I neared the end of my internship with Ninja Software, I was given the chance to be a judge for the 2019 Game Changer Awards, a STEM showcase event where high school students presented their projects.",
     techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
   },
   {
     name: "Ninja Software Internship",
+    role: "",
     span: "2019",
     description:
-      "Zen, the powerful admin tool for the Helping Minds company. With Zen, you can easily track and record important client data, including time sheets, mileage claims, personal information, and calendar meetings. Streamline your administrative tasks and keep all of your client data organized and accessible in one place with Zen.",
+      "About half way through my TAFE course I landed an internship role with Ninja Software. which gave me the oppurtunity to gain valuable real world experience whilst working with other great developers and mentors.",
     techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
   },
   {
     name: "North Metropolitain TAFE",
+    role: "",
     span: "2018",
     description:
-      "Zen, the powerful admin tool for the Helping Minds company. With Zen, you can easily track and record important client data, including time sheets, mileage claims, personal information, and calendar meetings. Streamline your administrative tasks and keep all of your client data organized and accessible in one place with Zen.",
+      "Upon graduating high school, I made the decision to enroll into the  software development diploma cours at North Metro TAFE in order to gain the skills and knowledge necessary to start a career in the industry.",
+    techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
+  },
+
+  {
+    name: "High School (Start of my proramming journey)",
+    role: "",
+    span: "2017",
+    description:
+      "Somewhere at the end of highschool I stumbled across a youtube channel called Brakeys, since watching his tutorial videos i built up a passion for programming/coding.",
     techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
   },
 ];
-
-export const WorkExperience = () => {
-  return (
-    <div id="experience" className="content-container">
-      <div className="about-me-intro">
-        <h2 className="content-title">EXPERIENCE</h2>
-        <p>Ninja Software / Syndicate 2019 - 2022</p>
-      </div>
-
-      <div className="skills-container">
-        {exps.map((ex) => {
-          return (
-            <ExperienceCard
-              name={ex.name}
-              span={ex.span}
-              description={ex.description}
-              techs={ex.techs}
-              key={ex.name}
-            />
-          );
-        })}
-      </div>
-    </div>
-  );
-};
-
-const ExperienceCard = ({
-  name,
-  span,
-  description,
-  techs,
-}: {
-  name: string;
-  span: string;
-  description: string;
-  techs: string[];
-}) => {
-  return (
-    <SimpleMotion>
-      <div className="experience-card">
-        <div className="time-span">{span}</div>
-
-        <div className="summary">
-          <h3>{name}</h3>
-          <p>{description}</p>
-          <div>{techs.join(" | ")}</div>
-        </div>
-      </div>
-    </SimpleMotion>
-  );
-};
 
 export const ExperienceTimeline = () => {
   return (
@@ -106,16 +75,7 @@ export const ExperienceTimeline = () => {
 
       <div className="timeline">
         {exps.map((ex, i) => {
-          return (
-            <TimeLineCard
-              name={ex.name}
-              span={ex.span}
-              description={ex.description}
-              techs={ex.techs}
-              index={i}
-              key={ex.name}
-            />
-          );
+          return <TimeLineCard experience={ex} index={i} key={ex.name} />;
         })}
       </div>
     </div>
@@ -123,18 +83,13 @@ export const ExperienceTimeline = () => {
 };
 
 const TimeLineCard = ({
-  name,
-  span,
-  description,
-  techs,
+  experience,
   index,
 }: {
-  name: string;
-  span: string;
-  description: string;
-  techs: string[];
+  experience: Experience;
   index: number;
 }) => {
+  const { name, span, description, techs } = experience;
   return (
     <SimpleMotion>
       <div
@@ -145,7 +100,6 @@ const TimeLineCard = ({
           <small>{span}</small>
           <h2>{name}</h2>
           <p>{description}</p>
-          <div>{techs.join(" | ")}</div>
         </div>
       </div>
     </SimpleMotion>

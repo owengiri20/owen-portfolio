@@ -48,10 +48,10 @@ const NavMenu = ({ isOpen }: { isOpen: boolean }) => {
       }}
       id="nav-items"
     >
-      <a href="#about-me">ABOUT ME</a>
-      <a href="#experience">EXPERIENCE</a>
-      <a href="#side-projects">SIDE PROJECTS</a>
-      <a href="#contact">CONTACT ME</a>
+      <a href="/#about-me">ABOUT ME</a>
+      <a href="/#experience">EXPERIENCE</a>
+      <a href="/#projects">PROJECTS</a>
+      <a href="/#contact">CONTACT ME</a>
 
       <div className="nav-socials">
         <a target="_blank" href="https://github.com/owengiri20">

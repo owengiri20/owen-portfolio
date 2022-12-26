@@ -13,28 +13,28 @@ const themes = [
     footerBackgroundColor: "#1A1A1A",
     cardBackgroundColor: "1A1A1A",
   },
-  {
-    name: "wheat",
-    textColor: "black",
-    backgroundColor: "wheat",
-    footerBackgroundColor: "wheat",
-    cardBackgroundColor: "white",
-  },
-  {
-    name: "lightcoral",
-    textColor: "black",
-    backgroundColor: "lightcoral",
-    footerBackgroundColor: "lightcoral",
-    cardBackgroundColor: "white",
-  },
+  // {
+  //   name: "wheat",
+  //   textColor: "black",
+  //   backgroundColor: "wheat",
+  //   footerBackgroundColor: "wheat",
+  //   cardBackgroundColor: "white",
+  // },
+  // {
+  //   name: "lightcoral",
+  //   textColor: "black",
+  //   backgroundColor: "lightcoral",
+  //   footerBackgroundColor: "lightcoral",
+  //   cardBackgroundColor: "white",
+  // },
 
-  {
-    name: "coolgreen",
-    textColor: "white",
-    backgroundColor: "#1CAC78",
-    footerBackgroundColor: "#1CAC78",
-    cardBackgroundColor: "#1CAC78",
-  },
+  // {
+  //   name: "coolgreen",
+  //   textColor: "white",
+  //   backgroundColor: "#1CAC78",
+  //   footerBackgroundColor: "#1CAC78",
+  //   cardBackgroundColor: "#1CAC78",
+  // },
 ];
 
 export const getTheme = (name: string) => {

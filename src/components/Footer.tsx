@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer>
+    <footer id="contact">
       <div className="socials">
         <a href="https://www.linkedin.com/in/owen-giri-0635b3178/">LinkedIn</a>
         <a href="https://github.com/owengiri20">Github</a>

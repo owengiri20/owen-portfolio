@@ -4,6 +4,14 @@
   --text-color: black;
   --footer-background-color: white;
 }
+@font-face {
+  font-family: myFirstFont;
+  src: url(./hind_font/HindSiliguri-Light.ttf);
+}
+
+p {
+  font-size: 1.3rem;
+}
 
 html {
   scroll-behavior: smooth;
@@ -11,6 +19,7 @@ html {
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  font-family: myFirstFont;
 }
 .app-wrapper {
   display: flex;
@@ -50,7 +59,7 @@ body {
 #nav-items {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: var(--background-color);
-  padding: 0.5rem;
+  padding: 1rem;
   margin-top: 0.5rem;
   width: 200px;
 }
@@ -128,7 +137,6 @@ body {
 
 .get-to-know-me-description {
   line-height: 1.3em;
-  font-size: 1.1rem;
 }
 
 .about-me-intro {
@@ -424,21 +432,14 @@ footer {
   transition: all ease 0.3s;
 }
 
+.carousel-card:hover {
+  filter: brightness(100%);
+}
+
 .selected {
   width: 85%;
   transition: all ease 0.3s;
-}
-
-/* .selected {
-  width: 42%;
-} */
-
-.carousel-card:hover {
-  filter: brightness(80%);
-}
-
-.carousel-card:hover {
-  filter: brightness(80%);
+  filter: brightness(100%);
 }
 
 .project-title {
@@ -454,7 +455,7 @@ footer {
 }
 
 .carousel-bottom {
-  opacity: 0;
+  opacity: 1;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 1rem;
   transition: all ease 0.3s;
@@ -485,7 +486,7 @@ footer {
   height: 100%;
   z-index: 99;
   text-align: center;
-  opacity: 0.5;
+  opacity: 0.7;
   transition: all ease 0.3s;
   cursor: pointer;
   margin: 0;
@@ -495,7 +496,6 @@ footer {
 
 .all-projects-btn h1:hover {
   opacity: 1;
-  border: 1px solid white;
   transition: all ease 0.3s;
 }
 
@@ -505,6 +505,6 @@ footer {
   width: 100% !important;
   left: 0;
   right: 0;
-  opacity: 0.8;
+  opacity: 0.6;
   cursor: pointer;
 }
