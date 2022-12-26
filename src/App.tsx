@@ -43,6 +43,7 @@ function App() {
     <div className="app-wrapper">
       <RoutesX />
       <Nav />
+      <Footer />
     </div>
   );
 }
@@ -54,7 +55,6 @@ const Landing = () => {
       <AboutMe />
       <ProjectCarousel />
       <ExperienceTimeline />
-      <Footer />
     </>
   );
 };

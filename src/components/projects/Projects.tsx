@@ -1,7 +1,11 @@
 import { SimpleMotion } from "../SimpleMotion";
-import NexusWebp from "./assets/nexus.webp";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+
+// images
+import NexusWebp from "./assets/nexus.webp";
+import ZenPng from "./assets/zen.png";
+
 interface Project {
   slug: string;
   name: string;
@@ -43,8 +47,7 @@ const projs: Project[] = [
     name: "Zen - Helping Minds",
     description:
       "As a junior developer at Ninja Software, I had the opportunity to work on Zen, a comprehensive admin platform for the Helping Minds company. The platform was designed to streamline the management of client data, including calendar appointments, travels, timesheets, and mileage claims. This project was one of the first major projects I worked on and it helped me to gain valuable experience in software development.",
-    imageURL:
-      "https://user-images.githubusercontent.com/46738862/208370952-35f4e37c-e173-48bc-a143-d2741f86fc2e.png",
+    imageURL: ZenPng,
     tasks: [
       "Built admin pages to manage and view users, clients data",
       "Built timesheets generator",
