@@ -8,6 +8,7 @@ import ZenPng from "./assets/zen.png";
 
 interface Project {
   slug: string;
+  url: string;
   name: string;
   description: string;
   imageURL: string;
@@ -17,6 +18,7 @@ interface Project {
 const projs: Project[] = [
   {
     slug: "supremacy",
+    url: "https://supremacy.game/",
     name: "Supremacy: Battle Arena",
     description:
       "As Ninja Software transforms from a successful software consulting company, to operating as 'Ninja Syndicate', a full-fledged gaming studio. Our debut project as a studio is Supremacy, a epic mech battle arena game. In Supremacy, players can watch nonstop action as giant AI-controlled war machines (mechs) engage in intense battles. As a spectator, you have the opportunity to get even more involved by supporting your preferred faction with special abilities like airstrikes and nukes. This unique gaming experience is sure to be a hit with players and spectators alike, and we can't wait for everyone to try it out.",
@@ -44,6 +46,7 @@ const projs: Project[] = [
   },
   {
     slug: "zen",
+    url: "",
     name: "Zen - Helping Minds",
     description:
       "As a junior developer at Ninja Software, I had the opportunity to work on Zen, a comprehensive admin platform for the Helping Minds company. The platform was designed to streamline the management of client data, including calendar appointments, travels, timesheets, and mileage claims. This project was one of the first major projects I worked on and it helped me to gain valuable experience in software development.",
@@ -64,6 +67,7 @@ const projs: Project[] = [
   },
   {
     slug: "tt",
+    url: "",
     name: "TT - Typing test",
     description:
       "I decided to build a typing test using Material UI as a way to not only improve my typing skills, but also to learn more about the library. I have always been a fan of typing games like Typeracer and Monkeytype, and I thought that building my own typing test would be a fun and challenging project. ",

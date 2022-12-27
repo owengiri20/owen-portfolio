@@ -24,7 +24,15 @@ export const ProjectPage = () => {
       <div className="project-content">
         <div className="project-content-inner">
           <SimpleMotion>
-            <h3>{project.name.toUpperCase()}</h3>
+            <div className="project-name">
+              <h3>{project.name.toUpperCase()}</h3>
+              {project.url && (
+                <a target="_blank" href={project.url}>
+                  VIEW PROJECT
+                </a>
+              )}
+            </div>
+
             <div className="skills-container">
               {project.techs.map((s) => {
                 return (

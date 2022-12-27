@@ -29,17 +29,11 @@ export const AboutMe = () => {
           <div>
             <h3>GET TO KNOW ME 🏃 🏋️ 🧋 🥋 ☕</h3>
             <p className="get-to-know-me-description">
-              Hi, my name is Owen and I am a full stack software developer. In
-              my professional life, I am skilled in a variety of programming
-              languages and tools such as Go, JavaScript, React, SQL, and Git.
-              As a developer, I am always looking to learn and expand my
-              skillset. In my personal life, I am passionate about staying
-              active and healthy. Some of my hobbies include martial arts,
-              running, and overall fitness. I also enjoy drawing and creating
-              art in my free time. Overall, I am a well-rounded individual with
-              a love for both my profession and personal interests. I am always
-              looking for new opportunities to grow and learn, both personally
-              and professionally.
+              Hi, I'm Owen, a full stack developer with expertise in Golang,
+              Typescript, and React. I have a strong skill set in building web
+              applications and am always looking to improve my skills and stay
+              up-to-date with the latest technologies. I am an eager learner and
+              enjoy collaborating with others.
             </p>
           </div>
           <div className="about-me-skills">
