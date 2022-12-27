@@ -69,16 +69,17 @@ const exps: Experience[] = [
       {
         name: "Zen - Helping minds",
         tasks: [
+          "Admin platform for the Helping Minds comapany",
           "Built timesheets/mileage claims PDF exporter",
-
           "Built admin pages to manage and view users, clients data",
         ],
       },
       {
         name: "Net Zero - Impact Tracker",
         tasks: [
-          "Built admin UI to manage sales data",
-          "Collabarated with other devs to create sales database schema",
+          "A Sustainability Reporting Platform, tracking progress towards 'net zero' by creating graphs of baselines and indicators.",
+          "Built UI for data entry of baselines, indicators and measures",
+          "Built tools to generate graphs based of the above data",
         ],
       },
     ],
@@ -101,6 +102,16 @@ const exps: Experience[] = [
     description:
       "About half way through my TAFE course I landed an internship role with Ninja Software. which gave me the oppurtunity to gain valuable real world experience whilst working with other great developers and mentors.",
     techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
+    projects: [
+      {
+        name: "GyfHub",
+        tasks: [
+          "A messaging app, where you can only send Gifs",
+          "Learnt React, how to use state, components, hooks",
+          "Learnt golang, how to write APIs, connect to databases",
+        ],
+      },
+    ],
   },
   {
     logo: Tafe,
