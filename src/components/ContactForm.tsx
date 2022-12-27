@@ -23,7 +23,6 @@ export const ContactForm = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": event.target.getAttribute("name"),
-        ...input,
       }),
     }).catch((error) => alert(error));
   };
