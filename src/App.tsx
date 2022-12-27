@@ -6,7 +6,7 @@ import { Hero } from "./components/Hero";
 import { Nav } from "./components/nav/Nav";
 import { getTheme } from "./components/nav/ThemeMenu";
 import { ProjectCarousel } from "./components/projects/Projects";
-import { ExperienceTimeline } from "./components/WorkExperience";
+import { ExperienceTimeline } from "./components/experience/WorkExperience";
 import {
   BrowserRouter as Router,
   Route,

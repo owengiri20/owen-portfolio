@@ -29,10 +29,10 @@ interface Project {
 const projs: Project[] = [
   {
     slug: "supremacy",
-    url: "",
+    url: "https://supremacy.game/",
     name: "Supremacy: Battle Arena",
     description:
-      "As Ninja Software transforms from a successful software consulting company, to operating as 'Ninja Syndicate', a full-fledged gaming studio. Our debut project as a studio is Supremacy, a epic mech battle arena game. In Supremacy, players can watch nonstop action as giant AI-controlled war machines (mechs) engage in intense battles. As a spectator, you have the opportunity to get even more involved by supporting your preferred faction with special abilities like airstrikes and nukes. This unique gaming experience is sure to be a hit with players and spectators alike, and we can't wait for everyone to try it out.",
+      "An epic mech battle arena game where players can watch nonstop action as giant AI-controlled war machines (mechs) engage in intense battles. As a spectator, you have the opportunity to get even more involved by supporting your faction with special abilities like airstrikes and nukes. ",
 
     imageURL: NexusWebp,
     images: [Sup1, Sup2, Sup3],
@@ -80,16 +80,16 @@ const projs: Project[] = [
   },
   {
     slug: "tt",
-    url: "",
+    url: "https://tt-typingtest.netlify.app/",
     name: "TT - Typing test",
     description:
-      "I decided to build a typing test using Material UI as a way to not only improve my typing skills, but also to learn more about the library. I have always been a fan of typing games like Typeracer and Monkeytype, and I thought that building my own typing test would be a fun and challenging project. ",
+      "I decided to build a typing test using Material UI as a way to not only improve my typing skills, but also to learn more about the library. I have always been a fan of typing games like Typeracer and Monkeytype, and I thought that building my own typing test would be a fun and challenging project.",
 
     imageURL:
       "https://user-images.githubusercontent.com/46738862/208370952-35f4e37c-e173-48bc-a143-d2741f86fc2e.png",
-    images: [""],
+    images: [],
     tasks: [],
-    techs: [],
+    techs: ["React", "Typescript", "Material UI"],
   },
 ];
 
@@ -124,39 +124,6 @@ export const ProjectCarousel = () => {
             );
           })}
         </div>
-        {/* 
-        <div className="all-projects-btn">
-          <div className="all-projects-btn-overlay"></div>
-          <h1>VIEW ALL</h1>
-          <div
-            style={{
-              backgroundImage: `url(${NexusWebp})`,
-              backgroundSize: "cover",
-              backgroundPosition: "right",
-            }}
-          />
-          <div
-            style={{
-              backgroundImage: `url(${NexusWebp})`,
-              backgroundSize: "cover",
-              backgroundPosition: "left",
-            }}
-          />
-          <div
-            style={{
-              backgroundImage: `url(${NexusWebp})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
-          <div
-            style={{
-              backgroundImage: `url(${NexusWebp})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
-        </div> */}
       </SimpleMotion>
     </div>
   );

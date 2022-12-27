@@ -1,18 +1,34 @@
-import { SimpleMotion } from "./SimpleMotion";
+import { SimpleMotion } from "../SimpleMotion";
+
+// logos
+import Njs from "./assets/njs.png";
+import Syn from "./assets/syn.png";
+import Tafe from "./assets/tafe.png";
+import Gca from "./assets/gca.png";
+
 interface Experience {
   name: string;
   span: string;
   role: string;
   description: string;
   techs: string[];
+  projects?: Project[];
+  logo: string;
 }
+
+interface Project {
+  name: string;
+  tasks: string[];
+}
+
 const exps: Experience[] = [
   {
+    logo: Syn,
     name: "Ninja Syndicate",
-    role: "",
-    span: "2021 - 2022",
+    role: "Full Stack Developer",
+    span: "2021 - Present",
     description:
-      "At the start of 2021, the Supremacy project kicked off, and now Ninja Software is tranforming from a consultant company to a full fledge gaming studio",
+      "At the start of 2021, the Supremacy project kicked off, and now Ninja Software is tranforming from a consultant company to a full fledge gaming studio.",
     techs: [
       "Typscript",
       "React",
@@ -23,35 +39,73 @@ const exps: Experience[] = [
       "Websockets",
       "Many more",
     ],
+    projects: [
+      {
+        name: "Supremacy: Battle Arena",
+        tasks: [
+          "Built and designed user's public profile page",
+          "Built React front end to show live stream feed using Ovenmedia engine",
+          "Built Telegram bots",
+        ],
+      },
+      {
+        name: "Supremacy World",
+        tasks: [
+          "Built admin UI to manage sales data",
+          "Collabarated with other devs to create sales database schema",
+        ],
+      },
+    ],
   },
   {
+    logo: Njs,
     name: "Ninja Software",
-    role: "",
-    span: "2019 - 2022",
+    role: "Full Stack Developer",
+    span: "2019 - 2021",
     description:
-      "Nearing the end of 2019, I landed a full time role as a junior software developer.",
+      "Nearing the end of 2019, I landed a full time role as a junior software full stack developer.",
     techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
+    projects: [
+      {
+        name: "Zen - Helping minds",
+        tasks: [
+          "Built timesheets/mileage claims PDF exporter",
+
+          "Built admin pages to manage and view users, clients data",
+        ],
+      },
+      {
+        name: "Net Zero - Impact Tracker",
+        tasks: [
+          "Built admin UI to manage sales data",
+          "Collabarated with other devs to create sales database schema",
+        ],
+      },
+    ],
   },
 
   {
-    name: "Game Changer Awards (Volenteer judge)",
-    role: "",
+    logo: Gca,
+    name: "Game Changer Awards ",
+    role: "Judge",
     span: "2019",
     description:
       "As I neared the end of my internship with Ninja Software, I was given the chance to be a judge for the 2019 Game Changer Awards, a STEM showcase event where high school students presented their projects.",
     techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
   },
   {
+    logo: Njs,
     name: "Ninja Software Internship",
-    role: "",
+    role: "Intern",
     span: "2019",
     description:
       "About half way through my TAFE course I landed an internship role with Ninja Software. which gave me the oppurtunity to gain valuable real world experience whilst working with other great developers and mentors.",
     techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
   },
   {
+    logo: Tafe,
     name: "North Metropolitain TAFE",
-    role: "",
+    role: "Student",
     span: "2018",
     description:
       "Upon graduating high school, I made the decision to enroll into the  software development diploma cours at North Metro TAFE in order to gain the skills and knowledge necessary to start a career in the industry.",
@@ -59,8 +113,9 @@ const exps: Experience[] = [
   },
 
   {
-    name: "High School (Start of my proramming journey)",
-    role: "",
+    logo: "",
+    name: "High School",
+    role: "Noob (Start of my proramming journey)",
     span: "2017",
     description:
       "Somewhere at the end of highschool I stumbled across a youtube channel called Brakeys, since watching his tutorial videos i built up a passion for programming/coding.",
@@ -89,7 +144,7 @@ const TimeLineCard = ({
   experience: Experience;
   index: number;
 }) => {
-  const { name, span, description, techs } = experience;
+  const { name, span, description, role, projects, logo } = experience;
   return (
     <SimpleMotion>
       <div
@@ -98,8 +153,27 @@ const TimeLineCard = ({
       >
         <div className="textbox">
           <small>{span}</small>
-          <h2>{name}</h2>
+          <div className="name-logo">
+            {logo && <img className="experience-logo" src={logo} alt="" />}
+            <h2>{name}</h2>
+          </div>
+
+          <p>{role}</p>
           <p>{description}</p>
+
+          {projects &&
+            projects.map((p) => {
+              return (
+                <div key={p.name}>
+                  <p>{p.name}</p>
+                  <ul>
+                    {p.tasks.map((t) => {
+                      return <li key={t}>{t}</li>;
+                    })}
+                  </ul>
+                </div>
+              );
+            })}
         </div>
       </div>
     </SimpleMotion>

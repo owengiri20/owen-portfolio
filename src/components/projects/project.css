@@ -67,11 +67,6 @@ li {
   width: auto;
 }
 
-.project-images {
-}
-.project-img {
-}
-
 @media screen and (max-width: 1050px) {
   .project-images {
     max-width: 900px;

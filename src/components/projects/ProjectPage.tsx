@@ -56,26 +56,29 @@ export const ProjectPage = () => {
             </div>
 
             <p>{project.description}</p>
-            <SimpleMotion>
-              <div className="project-images">
-                <Carousel infinite responsive={responsive2} arrows showDots>
-                  {project.images.map((img) => (
-                    <div
-                      className="project-img"
-                      key={img}
-                      style={{
-                        height: "600px",
-                        width: "100%",
-                        backgroundImage: `url(${img})`,
-                        backgroundSize: "contain",
-                        backgroundRepeat: "no-repeat",
-                        backgroundPosition: "center",
-                      }}
-                    ></div>
-                  ))}
-                </Carousel>
-              </div>
-            </SimpleMotion>
+            {project.images.length > 0 && (
+              <SimpleMotion>
+                <div className="project-images">
+                  <Carousel infinite responsive={responsive2} arrows showDots>
+                    {project.images.map((img) => (
+                      <div
+                        className="project-img"
+                        key={img}
+                        style={{
+                          height: "600px",
+                          width: "100%",
+                          backgroundImage: `url(${img})`,
+                          backgroundSize: "contain",
+                          backgroundRepeat: "no-repeat",
+                          backgroundPosition: "center",
+                        }}
+                      ></div>
+                    ))}
+                  </Carousel>
+                </div>
+              </SimpleMotion>
+            )}
+
             {project.tasks.length > 0 && (
               <>
                 <h3>WHAT I WORKED ON</h3>
