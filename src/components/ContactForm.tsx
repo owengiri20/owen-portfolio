@@ -17,6 +17,8 @@ export const ContactForm = () => {
   const handleSubmit = (event: any) => {
     console.log(input);
 
+    console.log("this", event.target.getAttribute("name"));
+
     event.preventDefault();
     fetch("/", {
       method: "POST",
@@ -30,7 +32,12 @@ export const ContactForm = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} name="contact" method="post">
+      <form
+        data-netlify="true"
+        onSubmit={handleSubmit}
+        name="contact"
+        method="post"
+      >
         <input type="hidden" name="form-name" value="contact" />
         <p>
           <label>
