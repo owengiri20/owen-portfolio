@@ -104,8 +104,17 @@ const exps: Experience[] = [
     techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
     projects: [
       {
+        name: "What I Learnt",
+        tasks: [
+          "React, how to use state, components, hooks",
+          "golang, how to write APIs, connect to databases",
+          "Postgresql, how to design schemas, write migrations",
+        ],
+      },
+      {
         name: "GyfHub",
         tasks: [
+          "Internship group project",
           "A messaging app, where you can only send Gifs",
           "Learnt React, how to use state, components, hooks",
           "Learnt golang, how to write APIs, connect to databases",
@@ -121,6 +130,16 @@ const exps: Experience[] = [
     description:
       "Upon graduating high school, I made the decision to enroll into the  software development diploma cours at North Metro TAFE in order to gain the skills and knowledge necessary to start a career in the industry.",
     techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
+    projects: [
+      {
+        name: "What I Learnt",
+        tasks: [
+          "C#, ASP.net, Winforms, WPF",
+          "Game dev with Unity, VR",
+          "Python, web scraping, data structures and algorithims",
+        ],
+      },
+    ],
   },
 
   {
