@@ -13,30 +13,11 @@ export const ProjectPage = () => {
   const responsive2 = {
     desktop: {
       breakpoint: {
-        max: 3000,
-        min: 1024,
+        max: 4000,
+        min: 0,
       },
       items: 1,
     },
-  };
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 0 },
-      innerWidth: 200,
-      outerWidth: 200,
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-    // tablet: {
-    //   breakpoint: { max: 1024, min: 464 },
-    //   items: 1,
-    //   slidesToSlide: 1, // optional, default to 1.
-    // },
-    // mobile: {
-    //   breakpoint: { max: 464, min: 0 },
-    //   items: 1,
-    //   slidesToSlide: 1, // optional, default to 1.
-    // },
   };
 
   return (
@@ -83,7 +64,7 @@ export const ProjectPage = () => {
                       className="project-img"
                       key={img}
                       style={{
-                        height: "400px",
+                        height: "600px",
                         width: "100%",
                         backgroundImage: `url(${img})`,
                         backgroundSize: "contain",
