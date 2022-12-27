@@ -14,38 +14,39 @@ export const ContactForm = () => {
       .join("&");
   }
 
-  const handleSubmit = (event: any) => {
-    console.log(input);
+  //   const handleSubmit = (event: any) => {
+  //     console.log(input);
 
-    console.log("this", event.target.getAttribute("name"));
+  //     console.log("this", event.target.getAttribute("name"));
 
-    event.preventDefault();
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": "contact",
-        Name: "test",
-      }),
-    }).catch((error) => alert(error));
-  };
+  //     event.preventDefault();
+  //     fetch("/", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //       body: encode({
+  //         "form-name": "contact",
+  //         Name: "test",
+  //       }),
+  //     }).catch((error) => alert(error));
+  //   };
 
   return (
     <div>
       <form
         data-netlify="true"
-        onSubmit={handleSubmit}
+        // onSubmit={handleSubmit}
         name="contact"
         method="post"
+        action="/contact"
       >
         <input type="hidden" name="form-name" value="contact" />
         <p>
           <label>
             Name:{" "}
             <input
-              onChange={(e) => {
-                setInput((p) => ({ ...p, name: e.target.value }));
-              }}
+              //   onChange={(e) => {
+              //     setInput((p) => ({ ...p, name: e.target.value }));
+              //   }}
               type="text"
               name="name"
             />
@@ -55,9 +56,9 @@ export const ContactForm = () => {
           <label>
             Email:{" "}
             <input
-              onChange={(e) => {
-                setInput((p) => ({ ...p, email: e.target.value }));
-              }}
+              //   onChange={(e) => {
+              //     setInput((p) => ({ ...p, email: e.target.value }));
+              //   }}
               name="email"
             />
           </label>
@@ -66,9 +67,9 @@ export const ContactForm = () => {
           <label>
             Message:{" "}
             <textarea
-              onChange={(e) => {
-                setInput((p) => ({ ...p, message: e.target.value }));
-              }}
+              //   onChange={(e) => {
+              //     setInput((p) => ({ ...p, message: e.target.value }));
+              //   }}
               name="message"
             ></textarea>
           </label>
