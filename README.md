@@ -22,3 +22,5 @@ TODO
 BACKBURNER
 
 - typewritter effect
+
+- https://github.com/ninja-syndicate/supremacy-play-web/pull/671

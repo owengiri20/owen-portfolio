@@ -2,11 +2,42 @@ import { useParams } from "react-router";
 import { GetProject } from "./Projects";
 import { SimpleMotion } from "../SimpleMotion";
 import "./project.css";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 export const ProjectPage = () => {
   const { id } = useParams();
   const project = GetProject(`${id}`);
   if (!project) return <div>no project</div>;
+
+  const responsive2 = {
+    desktop: {
+      breakpoint: {
+        max: 3000,
+        min: 1024,
+      },
+      items: 1,
+    },
+  };
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 0 },
+      innerWidth: 200,
+      outerWidth: 200,
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    // tablet: {
+    //   breakpoint: { max: 1024, min: 464 },
+    //   items: 1,
+    //   slidesToSlide: 1, // optional, default to 1.
+    // },
+    // mobile: {
+    //   breakpoint: { max: 464, min: 0 },
+    //   items: 1,
+    //   slidesToSlide: 1, // optional, default to 1.
+    // },
+  };
 
   return (
     <div className="project-page">
@@ -44,7 +75,26 @@ export const ProjectPage = () => {
             </div>
 
             <p>{project.description}</p>
-
+            <SimpleMotion>
+              <div className="project-images">
+                <Carousel infinite responsive={responsive2} arrows showDots>
+                  {project.images.map((img) => (
+                    <div
+                      className="project-img"
+                      key={img}
+                      style={{
+                        height: "400px",
+                        width: "100%",
+                        backgroundImage: `url(${img})`,
+                        backgroundSize: "contain",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                      }}
+                    ></div>
+                  ))}
+                </Carousel>
+              </div>
+            </SimpleMotion>
             {project.tasks.length > 0 && (
               <>
                 <h3>WHAT I WORKED ON</h3>
@@ -55,13 +105,6 @@ export const ProjectPage = () => {
                 </ul>
               </>
             )}
-          </SimpleMotion>
-
-          <SimpleMotion>
-            <div className="project-images">
-              <img src={project.imageURL} alt="" />
-              <img src={project.imageURL} alt="" />
-            </div>
           </SimpleMotion>
         </div>
       </div>

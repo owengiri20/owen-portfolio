@@ -3,8 +3,18 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 
 // images
+
+// supremacy
 import NexusWebp from "./assets/nexus.webp";
+import Sup1 from "./assets/sup1.png";
+import Sup2 from "./assets/sup2.png";
+import Sup3 from "./assets/sup3.png";
+
+// zen
 import ZenPng from "./assets/zen.png";
+import Zen1 from "./assets/zen1.png";
+import Zen2 from "./assets/zen2.png";
+import Zen3 from "./assets/zen3.png";
 
 interface Project {
   slug: string;
@@ -12,18 +22,20 @@ interface Project {
   name: string;
   description: string;
   imageURL: string;
+  images: string[];
   tasks: string[];
   techs: string[];
 }
 const projs: Project[] = [
   {
     slug: "supremacy",
-    url: "https://supremacy.game/",
+    url: "",
     name: "Supremacy: Battle Arena",
     description:
       "As Ninja Software transforms from a successful software consulting company, to operating as 'Ninja Syndicate', a full-fledged gaming studio. Our debut project as a studio is Supremacy, a epic mech battle arena game. In Supremacy, players can watch nonstop action as giant AI-controlled war machines (mechs) engage in intense battles. As a spectator, you have the opportunity to get even more involved by supporting your preferred faction with special abilities like airstrikes and nukes. This unique gaming experience is sure to be a hit with players and spectators alike, and we can't wait for everyone to try it out.",
 
     imageURL: NexusWebp,
+    images: [Sup1, Sup2, Sup3],
     tasks: [
       "Custom user avatar creation",
       "Built and designed user's public profile page",
@@ -49,8 +61,9 @@ const projs: Project[] = [
     url: "",
     name: "Zen - Helping Minds",
     description:
-      "As a junior developer at Ninja Software, I had the opportunity to work on Zen, a comprehensive admin platform for the Helping Minds company. The platform was designed to streamline the management of client data, including calendar appointments, travels, timesheets, and mileage claims. This project was one of the first major projects I worked on and it helped me to gain valuable experience in software development.",
+      "Zen, a comprehensive admin platform for the Helping Minds company. The platform was designed to streamline the management of client data, including calendar appointments, travels, timesheets, and mileage claims. This project was one of the first major projects I worked on and it helped me to gain valuable experience in software development.",
     imageURL: ZenPng,
+    images: [Zen1, Zen2, Zen3],
     tasks: [
       "Built admin pages to manage and view users, clients data",
       "Built timesheets generator",
@@ -74,6 +87,7 @@ const projs: Project[] = [
 
     imageURL:
       "https://user-images.githubusercontent.com/46738862/208370952-35f4e37c-e173-48bc-a143-d2741f86fc2e.png",
+    images: [""],
     tasks: [],
     techs: [],
   },

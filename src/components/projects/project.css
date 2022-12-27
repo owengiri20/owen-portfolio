@@ -54,16 +54,38 @@ ul {
   list-style-position: inside;
 }
 li {
-  list-style-type: square;
   font-size: 1.2rem;
 }
 
-.project-images {
-  display: flex;
-  margin-bottom: 2rem;
+.carousel .thumb img {
+  width: 100% !important;
+  height: 100% !important;
 }
 
-.project-images img {
-  width: 45%;
-  margin-right: 1rem;
+.carousel .slide img {
+  max-height: 300px;
+  width: auto;
+}
+
+.project-images {
+}
+.project-img {
+}
+
+@media screen and (max-width: 1050px) {
+  .project-images {
+    max-width: 900px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .project-images {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project-images {
+    max-width: 400px;
+  }
 }

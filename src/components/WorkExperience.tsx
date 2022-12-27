@@ -70,7 +70,7 @@ const exps: Experience[] = [
 
 export const ExperienceTimeline = () => {
   return (
-    <div className="content-container">
+    <div id="experience" className="content-container">
       <h2 className="content-title">EXPERIENCE</h2>
 
       <div className="timeline">
