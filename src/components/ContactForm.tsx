@@ -1,29 +1,27 @@
 export const ContactForm = () => {
-  const onSubmit = (e: any) => {
-    e.preventDefault();
-    console.log(e);
+  function encode(data: any) {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  }
 
-    console.log("submitting");
-
-    const myForm = e.target;
-    const formData = new FormData(myForm);
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: formData.toString(),
-    }).then((res) => {
-      console.log("then", res);
-    });
+      body: encode({
+        "form-name": event.target.getAttribute("name"),
+      }),
+    }).catch((error) => alert(error));
   };
 
   return (
     <div>
-      <form
-        onSubmit={(e) => onSubmit(e)}
-        name="contact"
-        method="POST"
-        data-netlify="true"
-      >
+      <form onSubmit={handleSubmit} name="contact" method="post">
+        <input type="hidden" name="form-name" value="contact" />
         <p>
           <label>
             Your Name: <input type="text" name="name" />
@@ -43,8 +41,6 @@ export const ContactForm = () => {
           <button type="submit">Send</button>
         </p>
       </form>
-
-      <input type="hidden" name="form-name" value="contact" />
     </div>
   );
 };
