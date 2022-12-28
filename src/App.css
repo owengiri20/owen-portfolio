@@ -243,8 +243,7 @@ footer {
 .socials {
   display: flex;
   justify-content: center;
-  margin-top: 7rem;
-  margin-bottom: 3rem;
+  margin: 1rem;
 }
 
 .socials > a {
@@ -255,6 +254,14 @@ footer {
   padding: 1rem;
   border-radius: 200px;
   cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.socials > a:hover {
+  color: var(--background-color);
+  border: 1px solid var(--background-color);
+  background-color: var(--text-color);
+  transition: all ease 0.2s;
 }
 
 .contact-me {
