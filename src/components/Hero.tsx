@@ -1,9 +1,11 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router";
 import OwenJPG from "../assets/owen.jpg";
 
 export const Hero = () => {
+  const nav = useNavigate();
   return (
     <div className="hero-container">
       <div className="hero">
@@ -32,6 +34,15 @@ export const Hero = () => {
           <img src={OwenJPG} className="owen" alt="image of me (:" />
         </div>
       </div>
+
+      <button
+        className="contact-me-btn"
+        onClick={() => {
+          nav("/contact");
+        }}
+      >
+        Contact Me
+      </button>
     </div>
   );
 };

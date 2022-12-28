@@ -5,14 +5,14 @@ const cardVariants: Variants = {
     opacity: 0,
     transition: {
       type: "tween",
-      duration: 0.8,
+      duration: 0.7,
     },
   },
   onscreen: {
     opacity: 1,
     transition: {
       type: "tween",
-      duration: 0.8,
+      duration: 0.7,
     },
   },
 };
