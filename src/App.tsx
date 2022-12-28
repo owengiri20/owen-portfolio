@@ -16,7 +16,7 @@ import {
 } from "react-router-dom";
 import { useEffect } from "react";
 import { ProjectPage } from "./components/projects/ProjectPage";
-import { ContactForm } from "./components/ContactForm";
+import { ContactForm } from "./components/contact/ContactForm";
 
 function App() {
   // set the theme
@@ -52,7 +52,6 @@ function App() {
 const Landing = () => {
   return (
     <>
-      <ContactForm />
       <Hero />
       <AboutMe />
       <ProjectCarousel />
@@ -66,6 +65,7 @@ const RoutesX = () => {
     <Routes>
       <Route path="/" element={<Landing />} />
       <Route path="/projects/:id" element={<ProjectPage />} />
+      <Route path="/contact" element={<ContactForm />} />
     </Routes>
   );
 };
