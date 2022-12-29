@@ -81,7 +81,7 @@ const projs: Project[] = [
   {
     slug: "tt",
     url: "https://tt-typingtest.netlify.app/",
-    name: "TT - Typing test",
+    name: "TT - Typing test (side project)",
     description:
       "I decided to build a typing test using Material UI as a way to not only improve my typing skills, but also to learn more about the library. I have always been a fan of typing games like Typeracer and Monkeytype, and I thought that building my own typing test would be a fun and challenging project.",
 
