@@ -17,10 +17,7 @@ export const Hero = () => {
             <a target="_blank" href="https://github.com/owengiri20">
               <FontAwesomeIcon size="2x" icon={faGithub} />
             </a>
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/owen-giri-0635b3178/"
-            >
+            <a target="_blank" href="https://www.linkedin.com/in/owen-giri">
               <FontAwesomeIcon size="2x" icon={faLinkedin} />
             </a>
             <a href="mailto:owengiri20@gmail.com">

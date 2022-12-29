@@ -57,7 +57,7 @@ const NavMenu = ({ isOpen }: { isOpen: boolean }) => {
         <a target="_blank" href="https://github.com/owengiri20">
           <FontAwesomeIcon size="lg" icon={faGithub} />
         </a>
-        <a href="https://www.linkedin.com/in/owen-giri-0635b3178/">
+        <a href="https://www.linkedin.com/in/owen-giri">
           <FontAwesomeIcon size="lg" icon={faLinkedin} />
         </a>
         <a href="mailto:owengiri20@gmail.com">
