@@ -1,3 +1,3 @@
 # Portfolio
 
-check it out: https://owengiri.netlify.app
+check it out: https://owengiri.dev
