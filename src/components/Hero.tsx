@@ -14,10 +14,10 @@ export const Hero = () => {
 					<h1>OWEN GIRI</h1>
 					<h2>FULL STACK DEVELOPER</h2>
 					<div className="hero-socials">
-						<a target="_blank" href="https://github.com/owengiri20">
+						<a rel="noopener noreferrer" target="_blank" href="https://github.com/owengiri20">
 							<FontAwesomeIcon size="2x" icon={faGithub} />
 						</a>
-						<a target="_blank" href="https://www.linkedin.com/in/owen-giri">
+						<a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/owen-giri">
 							<FontAwesomeIcon size="2x" icon={faLinkedin} />
 						</a>
 						<a href="mailto:owengiri20@gmail.com">
@@ -28,7 +28,7 @@ export const Hero = () => {
 
 				{/* column 2 */}
 				<div className="drop-in">
-					<img src={OwenJPG} className="owen" alt="image of me (:" />
+					<img src={OwenJPG} className="owen" alt="bing-chilling" />
 				</div>
 			</div>
 

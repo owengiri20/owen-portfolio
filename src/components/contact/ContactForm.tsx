@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { SimpleMotion } from "../SimpleMotion"
 import "./contact.css"
 export const ContactForm = () => {
