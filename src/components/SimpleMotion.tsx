@@ -1,31 +1,26 @@
-import { motion, Variants } from "framer-motion";
-import React, { ReactNode } from "react";
+import { motion, Variants } from "framer-motion"
+import React, { ReactNode } from "react"
 const cardVariants: Variants = {
-  offscreen: {
-    opacity: 0,
-    transition: {
-      type: "tween",
-      duration: 0.7,
-    },
-  },
-  onscreen: {
-    opacity: 1,
-    transition: {
-      type: "tween",
-      duration: 0.7,
-    },
-  },
-};
+	offscreen: {
+		opacity: 0,
+		transition: {
+			type: "tween",
+			duration: 0.7,
+		},
+	},
+	onscreen: {
+		opacity: 1,
+		transition: {
+			type: "tween",
+			duration: 0.7,
+		},
+	},
+}
 
 export const SimpleMotion = ({ children }: { children: ReactNode }) => {
-  return (
-    <motion.div
-      variants={cardVariants}
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ amount: 0.1 }}
-    >
-      {children}
-    </motion.div>
-  );
-};
+	return (
+		<motion.div variants={cardVariants} initial="offscreen" whileInView="onscreen" viewport={{ amount: 0.1 }}>
+			{children}
+		</motion.div>
+	)
+}
