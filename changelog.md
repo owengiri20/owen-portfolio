@@ -1,3 +1,111 @@
+commit 600cf8ad59ec935a36b00b4bf290d07b347d33d8 (HEAD -> main, origin/main)
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Thu Dec 29 22:45:27 2022 +0800
+
+    update linked in deets
+
+commit c9532d2777b36cd48e249db854da9216c2d3cce3
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Thu Dec 29 08:04:27 2022 +0800
+
+    change
+
+commit 55e59a09cc90a18f7a134ec62279ade86b581c42
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Wed Dec 28 14:19:53 2022 +0800
+
+    add styling
+
+commit d17259854bef19f6d694cea021a4dcf67096fffe
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Wed Dec 28 13:40:05 2022 +0800
+
+    styling contact button
+
+commit 178b7d453d208e1cd8e7bf39f9f8785361637e48
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Wed Dec 28 13:14:32 2022 +0800
+
+    redirects
+
+commit 17a95119ebb6f46337cd94bacef6961297a27108
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Wed Dec 28 13:12:33 2022 +0800
+
+    redirects
+
+commit 0060b62872462f554f10aed8d9cbfcf9a119a982
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Wed Dec 28 13:08:43 2022 +0800
+
+    updated cotact form
+
+commit 070cfb03e712acef5f190a355e2d0fddbf757aaf
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Tue Dec 27 23:57:03 2022 +0800
+
+    contact form again
+
+commit 44a25e2bd61034731ef85df9bf4273b5d4ec85c7
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Tue Dec 27 23:47:40 2022 +0800
+
+    trying out netlify forms
+
+commit c506acb5aa6f95282582aad73b72fced4ae5f476
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Tue Dec 27 22:18:09 2022 +0800
+
+    updated experience content
+
+commit 9b977c08490af8f4912f9ab07b79022117db872c
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Tue Dec 27 22:02:05 2022 +0800
+
+    add slide show to project page, expand on experience cards
+
+commit f04badcb31164465fa705ff12067622aeca5f6ad
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Tue Dec 27 19:44:52 2022 +0800
+
+    fix carousel
+
+commit 84f05f6ef6160102ca3a65c875b0a71766337080
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Tue Dec 27 17:32:42 2022 +0800
+
+    put some images
+
+commit c05504dc8126035d062226a6b5bd6a058f04ab9f
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Tue Dec 27 09:55:32 2022 +0800
+
+    view project button
+
+commit 6d9efa2b537a7edf539a9acde69cd68b447bfea5
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Tue Dec 27 00:58:52 2022 +0800
+
+    update image
+
+commit d7f00aa62f59f806edf0f29dc65b639cda2ec31f
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Tue Dec 27 00:35:13 2022 +0800
+
+    [WIP] adding more copy, working on induvidual projects section, bunch of other clean up
+
+commit 906f996447bb71de894d773984fa8d10742c43e2
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Sun Dec 25 16:18:04 2022 +0800
+
+    starting on induvidual project page
+
+commit 6db12755c9151cf40596eff92a002bd7809f4473
+Author: owengiri20 <owengiri20@gmail.com>
+Date: Sun Dec 25 11:58:29 2022 +0800
+
+    style view all button
+
 commit 379e6def87fb1299e76774837a66eda2846a2f8a
 Author: owengiri20 <owengiri20@gmail.com>
 Date: Sat Dec 24 01:46:07 2022 +0800

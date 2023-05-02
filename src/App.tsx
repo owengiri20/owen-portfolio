@@ -1,22 +1,17 @@
+import { useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
 import "./Animation.css";
 import "./App.css";
 import { AboutMe } from "./components/AboutMe";
+import { Changelog } from "./components/Changelog";
+import { ContactForm } from "./components/contact/ContactForm";
+import { ExperienceTimeline } from "./components/experience/WorkExperience";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { Nav } from "./components/nav/Nav";
 import { getTheme } from "./components/nav/ThemeMenu";
-import { ProjectCarousel } from "./components/projects/Projects";
-import { ExperienceTimeline } from "./components/experience/WorkExperience";
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Routes,
-  BrowserRouter,
-} from "react-router-dom";
-import { useEffect } from "react";
 import { ProjectPage } from "./components/projects/ProjectPage";
-import { ContactForm } from "./components/contact/ContactForm";
+import { ProjectCarousel } from "./components/projects/Projects";
 
 function App() {
   // set the theme
@@ -42,8 +37,8 @@ function App() {
   }, []);
   return (
     <div className="app-wrapper">
-      <RoutesX />
       <Nav />
+      <RenderRoutes />
       <Footer />
     </div>
   );
@@ -56,11 +51,12 @@ const Landing = () => {
       <AboutMe />
       <ProjectCarousel />
       <ExperienceTimeline />
+      <Changelog />
     </>
   );
 };
 
-const RoutesX = () => {
+const RenderRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Landing />} />
