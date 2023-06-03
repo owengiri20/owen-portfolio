@@ -64,36 +64,30 @@ const ColorItem = ({ theme }: { theme: ThemeObj }) => {
 	return <div onClick={onChangeTheme} className="theme-circle" style={{ background: backgroundColor }} />
 }
 
-// Hacky af but it'll do for now hehe
 export const ThemeChanger = () => {
-	const [themeState, setThemeState] = useState(localStorage.getItem("theme") || "")
+	const [themeState, setThemeState] = useState(localStorage.getItem("theme") || "light")
 
 	useEffect(() => {
-		localStorage.setItem("theme", themeState)
-	}, [themeState])
-
-	const newTheme = (localStorage.getItem("theme") || "") === "dark" ? "light" : "dark"
-	const { backgroundColor, cardBackgroundColor, footerBackgroundColor, textColor } = getTheme(newTheme)
-
-	const onChangeTheme = () => {
-		console.log("new theme", (localStorage.getItem("theme") || "") === "dark" ? "light" : "dark")
+		const { backgroundColor, cardBackgroundColor, footerBackgroundColor, textColor } = getTheme(themeState)
 		const r = document.documentElement
-		if (r) {
-			console.log("in")
-			console.log(localStorage)
 
+		if (r) {
 			r.style.setProperty("--background-color", backgroundColor)
 			r.style.setProperty("--card-background-color", cardBackgroundColor)
 			r.style.setProperty("--text-color", textColor)
 			r.style.setProperty("--footer-background-color", footerBackgroundColor)
-
-			setThemeState(newTheme)
-			localStorage.setItem("theme", newTheme)
 		}
+
+		localStorage.setItem("theme", themeState)
+	}, [themeState])
+
+	const onChangeTheme = () => {
+		setThemeState((prevTheme) => (prevTheme === "dark" ? "light" : "dark"))
 	}
+
 	return (
 		<div style={{ textTransform: "uppercase" }} onClick={onChangeTheme}>
-			Theme: <span style={{ fontWeight: "bold" }}>{localStorage.getItem("theme") || ""}</span>
+			Theme: <span style={{ fontWeight: "bold" }}>{themeState}</span>
 		</div>
 	)
 }

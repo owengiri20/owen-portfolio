@@ -114,9 +114,10 @@ body {
 }
 
 .hero > .column-1 > h1 {
-	font-size: 5.5rem;
+	font-size: 5.9rem;
 	margin-top: 0;
 	margin-bottom: 0;
+	font-weight: bolder;
 }
 
 .hero-socials {
@@ -131,7 +132,7 @@ body {
 
 .owen {
 	margin: 2rem;
-	height: 28rem;
+	height: 32rem;
 }
 
 .get-to-know-me-description {
