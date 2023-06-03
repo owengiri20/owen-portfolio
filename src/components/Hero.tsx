@@ -3,8 +3,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useNavigate } from "react-router"
 import OwenJPG from "../assets/owen.jpg"
-import Resume from './owen_giri_resume_2023.pdf'; 
-
+import Resume from "./owen_giri_resume_2023.pdf"
 
 export const Hero = () => {
 	const nav = useNavigate()
@@ -35,23 +34,21 @@ export const Hero = () => {
 			</div>
 			<div className="contact-container">
 				<button
-				onClick={() => {
-					nav("/contact")
-				}}
-			>
-				Contact Me
-			</button>
+					onClick={() => {
+						nav("/contact")
+					}}
+				>
+					Contact Me
+				</button>
 
-			<button
-				onClick={() => {
-					window.open(Resume, '_blank');
-				}}
-			>
-				Resume
-			</button>
+				<button
+					onClick={() => {
+						window.open(Resume, "_blank")
+					}}
+				>
+					View Resume
+				</button>
 			</div>
-
-			
 		</div>
 	)
 }
