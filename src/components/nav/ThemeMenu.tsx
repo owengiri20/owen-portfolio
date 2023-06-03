@@ -1,41 +1,20 @@
+import { useEffect, useState } from "react"
+
 const themes = [
 	{
-		name: "dark1",
+		name: "dark",
 		textColor: "white",
 		backgroundColor: "#1A1A1A",
 		footerBackgroundColor: "#1A1A1A",
 		cardBackgroundColor: "1A1A1A",
 	},
 	{
-		name: "white",
+		name: "light",
 		textColor: "black",
 		backgroundColor: "#f5f5f5",
 		footerBackgroundColor: "#f5f5f5",
 		cardBackgroundColor: "#f5f5f5",
 	},
-
-	// {
-	// 	name: "wheat",
-	// 	textColor: "black",
-	// 	backgroundColor: "wheat",
-	// 	footerBackgroundColor: "wheat",
-	// 	cardBackgroundColor: "white",
-	// },
-	// {
-	// 	name: "lightcoral",
-	// 	textColor: "black",
-	// 	backgroundColor: "lightcoral",
-	// 	footerBackgroundColor: "lightcoral",
-	// 	cardBackgroundColor: "white",
-	// },
-
-	// {
-	// 	name: "coolgreen",
-	// 	textColor: "white",
-	// 	backgroundColor: "#1CAC78",
-	// 	footerBackgroundColor: "#1CAC78",
-	// 	cardBackgroundColor: "#1CAC78",
-	// },
 ]
 
 export const getTheme = (name: string) => {
@@ -83,4 +62,40 @@ const ColorItem = ({ theme }: { theme: ThemeObj }) => {
 		}
 	}
 	return <div onClick={onChangeTheme} className="theme-circle" style={{ background: backgroundColor }} />
+}
+
+// Hacky af but it'll do for now hehe
+export const ThemeChanger = () => {
+	const [themeState, setThemeState] = useState("")
+
+	useEffect(() => {
+		localStorage.setItem("theme", themeState)
+	}, [themeState])
+
+	const { backgroundColor, cardBackgroundColor, footerBackgroundColor, name, textColor } = getTheme(
+		(localStorage.getItem("theme") || "") === "dark" ? "light" : "dark",
+	)
+
+	const onChangeTheme = () => {
+		console.log("new theme", (localStorage.getItem("theme") || "") === "dark" ? "light" : "dark")
+		const r = document.documentElement
+		if (r) {
+			console.log("in")
+			console.log(localStorage)
+			const newTheme = (localStorage.getItem("theme") || "") === "dark" ? "light" : "dark"
+
+			r.style.setProperty("--background-color", backgroundColor)
+			r.style.setProperty("--card-background-color", cardBackgroundColor)
+			r.style.setProperty("--text-color", textColor)
+			r.style.setProperty("--footer-background-color", footerBackgroundColor)
+
+			setThemeState(newTheme)
+			localStorage.setItem("theme", newTheme)
+		}
+	}
+	return (
+		<div style={{ textTransform: "uppercase" }} onClick={onChangeTheme}>
+			Theme: <span style={{ fontWeight: "bold" }}>{localStorage.getItem("theme") || ""}</span>
+		</div>
+	)
 }

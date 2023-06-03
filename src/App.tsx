@@ -19,7 +19,7 @@ function App() {
 		// get theme
 		const r = document.documentElement
 		if (r) {
-			const name = localStorage.getItem("theme") || "dark1"
+			const name = localStorage.getItem("theme") || "dark"
 			const theme = getTheme(name)
 
 			const { backgroundColor, cardBackgroundColor, textColor, footerBackgroundColor } = theme
