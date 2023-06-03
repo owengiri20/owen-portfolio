@@ -66,15 +66,14 @@ const ColorItem = ({ theme }: { theme: ThemeObj }) => {
 
 // Hacky af but it'll do for now hehe
 export const ThemeChanger = () => {
-	const [themeState, setThemeState] = useState("")
+	const [themeState, setThemeState] = useState(localStorage.getItem("theme") || "")
 
 	useEffect(() => {
 		localStorage.setItem("theme", themeState)
 	}, [themeState])
 
-	const { backgroundColor, cardBackgroundColor, footerBackgroundColor, name, textColor } = getTheme(
-		(localStorage.getItem("theme") || "") === "dark" ? "light" : "dark",
-	)
+	const newTheme = (localStorage.getItem("theme") || "") === "dark" ? "light" : "dark"
+	const { backgroundColor, cardBackgroundColor, footerBackgroundColor, textColor } = getTheme(newTheme)
 
 	const onChangeTheme = () => {
 		console.log("new theme", (localStorage.getItem("theme") || "") === "dark" ? "light" : "dark")
@@ -82,7 +81,6 @@ export const ThemeChanger = () => {
 		if (r) {
 			console.log("in")
 			console.log(localStorage)
-			const newTheme = (localStorage.getItem("theme") || "") === "dark" ? "light" : "dark"
 
 			r.style.setProperty("--background-color", backgroundColor)
 			r.style.setProperty("--card-background-color", cardBackgroundColor)
