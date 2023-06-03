@@ -1,6 +1,7 @@
 import { SimpleMotion } from "../SimpleMotion"
 
 // logos
+import Wev from "./assets/wevolt.png"
 import Njs from "./assets/njs.png"
 import Syn from "./assets/syn.png"
 import Tafe from "./assets/tafe.png"
@@ -23,10 +24,29 @@ interface Project {
 
 const exps: Experience[] = [
 	{
+		logo: Wev,
+		name: "",
+		role: "Full Stack Developer",
+		span: "2023 - Present",
+		description:
+			"I contributed to the development of an innovative electric vehicle charging station management solution. I played a key role in creating server-side services, integrating a data scraper for PlugShare, and designing a user-friendly front-end admin panel for efficient charging station management.",
+		techs: ["Typscript", "React", "Chakra UI", "Golang", "Postgresql", "REST", "React Native", "Python"],
+		projects: [
+			{
+				name: "",
+				tasks: [
+					"Built and designed user's public profile page",
+					"Built React front end to show live stream feed using Ovenmedia engine",
+					"Built Telegram bots",
+				],
+			},
+		],
+	},
+	{
 		logo: Syn,
 		name: "Ninja Syndicate",
 		role: "Full Stack Developer",
-		span: "2021 - Present",
+		span: "2021 - 2022",
 		description:
 			"At the start of 2021, the Supremacy project kicked off, and now Ninja Software is tranforming from a consultant company to a full fledge gaming studio.",
 		techs: ["Typscript", "React", "Material UI", "Golang", "Postgresql", "REST", "Websockets", "Many more"],
