@@ -1,7 +1,22 @@
 import { SimpleMotion } from "./SimpleMotion"
 
 export const AboutMe = () => {
-	const skills = ["HTML", "CSS", "Javascript", "Typescript", "React", "MUI", "Golang", "REST", "Websockets", "GraphQL", "SQL", "Git"]
+	const skills = [
+		"HTML",
+		"CSS",
+		"Javascript",
+		"Typescript",
+		"React",
+		"Material UI",
+		"Chakra UI",
+		"Golang",
+		"Python",
+		"REST",
+		"Websockets",
+		"GraphQL",
+		"SQL",
+		"Git",
+	]
 
 	const other = ["VS Code", "Linux", "Github"]
 

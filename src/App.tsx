@@ -11,6 +11,7 @@ import { Nav } from "./components/nav/Nav"
 import { getTheme } from "./components/nav/ThemeMenu"
 import { ProjectPage } from "./components/projects/ProjectPage"
 import { ProjectCarousel } from "./components/projects/Projects"
+import { CursorPage } from "./cursorTest/cursor"
 
 function App() {
 	// set the theme
@@ -18,7 +19,7 @@ function App() {
 		// get theme
 		const r = document.documentElement
 		if (r) {
-			const name = localStorage.getItem("theme") || "white"
+			const name = localStorage.getItem("theme") || "dark1"
 			const theme = getTheme(name)
 
 			const { backgroundColor, cardBackgroundColor, textColor, footerBackgroundColor } = theme
@@ -54,6 +55,7 @@ const RoutesX = () => {
 		<Routes>
 			<Route path="/" element={<Landing />} />
 			<Route path="/projects/:id" element={<ProjectPage />} />
+			<Route path="/cursor" element={<CursorPage />} />
 			<Route path="/contact" element={<ContactForm />} />
 		</Routes>
 	)
