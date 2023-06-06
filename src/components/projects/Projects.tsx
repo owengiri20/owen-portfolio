@@ -4,6 +4,14 @@ import { useNavigate } from "react-router"
 
 // images
 
+// wevolt
+import WevoltPreview from "./assets/wevolt-preview.png"
+import WevoltPreview2 from "./assets/wevolt-preview2.png"
+import Wev1 from "./assets/wev1.png"
+import Wev2 from "./assets/wev2.png"
+import Wev3 from "./assets/wev3.png"
+import Wev4 from "./assets/wev4.png"
+
 // supremacy
 import NexusWebp from "./assets/nexus.webp"
 import Sup1 from "./assets/sup1.png"
@@ -23,11 +31,29 @@ interface Project {
 	name: string
 	description: string
 	imageURL: string
+	altImageURL?: string
 	images: string[]
 	tasks: string[]
 	techs: string[]
+
+	// style
+	backgroundPos?: string
 }
 const projs: Project[] = [
+	{
+		slug: "wevolt",
+		url: "https://wevolt.com.au/",
+		name: "Wevolt",
+		description:
+			"A platform designed to make EV charging easy. With its Charge Point Management System, those who operate charging points can efficiently manage their chargers and locations. In this project, my job was pretty interesting. I built a tool to gather data from Plugshare's API, focusing on information about charging stations and their locations. Also, I created easy-to-use sorting and filtering options to show that data on a map, making it more user-friendly.",
+
+		imageURL: WevoltPreview,
+		altImageURL: WevoltPreview2,
+		images: [Wev1, Wev2, Wev3, Wev4],
+		tasks: [],
+		techs: ["React", "React Native", "Typescript", "Chakra UI", "Golang", "Postgresql", "Plugshare API"],
+		backgroundPos: "left",
+	},
 	{
 		slug: "supremacy",
 		url: "https://supremacy.game/",
@@ -49,7 +75,7 @@ const projs: Project[] = [
 			"React",
 			"Typescript",
 			"Material UI",
-			"PostgresQL",
+			"PostgresqL",
 			"Websockets",
 			"RESTful APIs",
 			"Oven Media Engine",
@@ -72,18 +98,18 @@ const projs: Project[] = [
 		],
 		techs: ["Golang", "Typescript", "React", "RESTful APIs", "Base Web UI", "Google Maps API"],
 	},
-	{
-		slug: "tt",
-		url: "https://tt-typingtest.netlify.app/",
-		name: "TT - Typing test (side project)",
-		description:
-			"I decided to build a typing test using Material UI as a way to not only improve my typing skills, but also to learn more about the library. I have always been a fan of typing games like Typeracer and Monkeytype, and I thought that building my own typing test would be a fun and challenging project.",
+	// {
+	// 	slug: "tt",
+	// 	url: "https://tt-typingtest.netlify.app/",
+	// 	name: "TT - Typing test (side project)",
+	// 	description:
+	// 		"I decided to build a typing test using Material UI as a way to not only improve my typing skills, but also to learn more about the library. I have always been a fan of typing games like Typeracer and Monkeytype, and I thought that building my own typing test would be a fun and challenging project.",
 
-		imageURL: "https://user-images.githubusercontent.com/46738862/208370952-35f4e37c-e173-48bc-a143-d2741f86fc2e.png",
-		images: [],
-		tasks: [],
-		techs: ["React", "Typescript", "Material UI"],
-	},
+	// 	imageURL: "https://user-images.githubusercontent.com/46738862/208370952-35f4e37c-e173-48bc-a143-d2741f86fc2e.png",
+	// 	images: [],
+	// 	tasks: [],
+	// 	techs: ["React", "Typescript", "Material UI"],
+	// },
 ]
 
 export const GetProject = (slug: string) => {
@@ -103,7 +129,7 @@ export const ProjectCarousel = () => {
 	return (
 		<div className="content-container" id="projects">
 			<SimpleMotion>
-				<h2 className="content-title">PROJECTS</h2>
+				<h2 className="content-title">WORK</h2>
 				<div className="carousel">
 					{projs.map((p) => {
 						return (
@@ -138,11 +164,12 @@ export const ProjectCarouselCard = ({ project, onClick, isSelected }: { isSelect
 				backgroundImage: `url(${imageURL})`,
 				backgroundSize: "cover",
 				backgroundPosition: "center",
+				backgroundRepeat: "no-repeat",
 			}}
 		>
 			{(smallerScreens || isSelected) && (
 				<div className="carousel-bottom">
-					<h3 className="project-title">{name.toUpperCase()}</h3>
+					<h3 className="project-title">{name}</h3>
 					<p className="click-to-view">CLICK FOR MORE INFO</p>
 				</div>
 			)}

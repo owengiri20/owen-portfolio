@@ -35,9 +35,9 @@ const exps: Experience[] = [
 			{
 				name: "",
 				tasks: [
-					"Built and designed user's public profile page",
-					"Built React front end to show live stream feed using Ovenmedia engine",
-					"Built Telegram bots",
+					"Built CPMS Location related Functionalities (Create, View, Edit)",
+					"Built a Scraper, to hit plugshare's API and sort/filter that data",
+					"Built the backend of Map view functionality",
 				],
 			},
 		],
