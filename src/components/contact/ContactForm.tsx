@@ -12,16 +12,16 @@ export const ContactForm = () => {
 					<h3>Get In Touch 💬</h3>
 
 					<div>
-						<p>Name</p>
+						<p className="contact-form-label">Name</p>
 						<input type="text" name="name" />
 					</div>
 					<div>
-						<p>Email</p>
+						<p className="contact-form-label">Email</p>
 						<input name="email" />
 					</div>
 
 					<div>
-						<p>Message</p>
+						<p className="contact-form-label">Message</p>
 						<textarea name="message"></textarea>
 					</div>
 
