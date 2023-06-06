@@ -52,8 +52,9 @@ body {
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-#nav-icon > div:first-of-type {
-	margin-right: 2rem;
+#nav-icon > div {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
 }
 
 #nav-items {
@@ -184,8 +185,10 @@ body {
 }
 
 .experience-logo {
-	height: 40px;
+	height: 50px;
 	margin-right: 1rem;
+	mix-blend-mode: multiply;
+	border-radius: 5px;
 }
 .name-logo {
 	display: flex;

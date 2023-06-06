@@ -13,7 +13,7 @@ import Wev3 from "./assets/wev3.png"
 import Wev4 from "./assets/wev4.png"
 
 // supremacy
-import NexusWebp from "./assets/nexus.webp"
+import SupremacyPreview from "./assets/SupremacyPreview.png"
 import Sup1 from "./assets/sup1.png"
 import Sup2 from "./assets/sup2.png"
 import Sup3 from "./assets/sup3.png"
@@ -61,7 +61,7 @@ const projs: Project[] = [
 		description:
 			"An epic mech battle arena game where players can watch nonstop action as giant AI-controlled war machines (mechs) engage in intense battles. As a spectator, you have the opportunity to get even more involved by supporting your faction with special abilities like airstrikes and nukes. ",
 
-		imageURL: NexusWebp,
+		imageURL: SupremacyPreview,
 		images: [Sup1, Sup2, Sup3],
 		tasks: [
 			"Custom user avatar creation",

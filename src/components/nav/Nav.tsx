@@ -8,15 +8,11 @@ export const Nav = () => {
 	// show nav menu
 	const [navMenuOpen, setNavMenuOpen] = useState(false)
 
-	// show theme menu
-	// const [themeMenuOpen, setThemeMenuOpen] = useState(false)
-
 	return (
 		<div className="nav">
 			<div id="nav-icon">
 				<div
 					onClick={() => {
-						// setThemeMenuOpen(false)
 						setNavMenuOpen((prev) => !prev)
 					}}
 				>
@@ -26,16 +22,13 @@ export const Nav = () => {
 				<div
 					onClick={() => {
 						setNavMenuOpen(false)
-						// setThemeMenuOpen((prev) => !prev)
 					}}
 				>
-					{/* <FontAwesomeIcon size="lg" icon={faFillDrip} /> */}
 					<ThemeChanger />
 				</div>
 			</div>
 
 			{navMenuOpen && <NavMenu isOpen={navMenuOpen} />}
-			{/* {themeMenuOpen && <ThemeMenu isOpen={themeMenuOpen} />} */}
 		</div>
 	)
 }
