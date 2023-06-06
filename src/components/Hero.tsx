@@ -43,7 +43,7 @@ export const Hero = () => {
 
 				<button
 					onClick={() => {
-						window.open(Resume, "_blank")
+						window.open("/docs/owen_giri_resume.pdf", "_blank")
 					}}
 				>
 					View Resume
