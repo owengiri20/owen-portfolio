@@ -3,7 +3,6 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useNavigate } from "react-router"
 import OwenJPG from "../assets/owen.jpg"
-import Resume from "./owen_giri_resume_2023.pdf"
 
 export const Hero = () => {
 	const nav = useNavigate()
