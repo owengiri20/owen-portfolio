@@ -1,86 +1,99 @@
 .project-hero {
-  width: 100vw;
-  height: 60vh;
-  position: relative;
-  transition: all ease 0.3s;
+	width: 100vw;
+	height: 60vh;
+	position: relative;
+	transition: all ease 0.3s;
 }
 
 .project-hero h2 {
-  position: absolute;
-  top: 50%;
-  right: 20px;
+	position: absolute;
+	top: 50%;
+	right: 20px;
 }
 
 .project-name {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .project-name a {
-  margin-right: 2rem;
-  height: 50px;
-  cursor: pointer;
-  background: var(--text-color);
-  color: var(--background-color);
-  padding: 1rem;
-  font-weight: bold;
-  border: 0;
-  transition: all ease 0.2s;
-  text-decoration: none;
+	margin-right: 2rem;
+	height: 50px;
+	cursor: pointer;
+	background: var(--text-color);
+	color: var(--background-color);
+	padding: 1rem;
+	font-weight: bold;
+	border: 0;
+	transition: all ease 0.2s;
+	text-decoration: none;
+	font-size: 1rem;
 }
 
 .project-name a:hover {
-  transform: scale(1.05);
-  transition: all ease 0.2s;
+	transform: scale(1.05);
+	transition: all ease 0.2s;
 }
 .project-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .project-content-inner {
-  width: 80%;
-  max-width: 1100px;
+	width: 80%;
+	max-width: 1100px;
 }
 
 .project-content-inner h3 {
-  font-size: 2rem;
+	font-size: 2rem;
 }
 
 ul {
-  padding: 0;
-  list-style-position: inside;
+	padding: 0;
+	list-style-position: inside;
 }
 li {
-  font-size: 1.2rem;
+	font-size: 1.2rem;
 }
 
 .carousel .thumb img {
-  width: 100% !important;
-  height: 100% !important;
+	width: 100% !important;
+	height: 100% !important;
 }
 
 .carousel .slide img {
-  max-height: 300px;
-  width: auto;
+	max-height: 300px;
+	width: auto;
 }
 
 @media screen and (max-width: 1050px) {
-  .project-images {
-    max-width: 900px;
-  }
+	.project-images {
+		max-width: 900px;
+	}
 }
 
 @media screen and (max-width: 800px) {
-  .project-images {
-    max-width: 600px;
-  }
+	.project-images {
+		max-width: 600px;
+	}
+
+	.project-name a {
+		font-size: 0.8rem;
+	}
 }
 
 @media screen and (max-width: 600px) {
-  .project-images {
-    max-width: 400px;
-  }
+	.project-images {
+		max-width: 400px;
+	}
+
+	.project-name a {
+		font-size: 0.7rem;
+	}
+
+	.project-content-inner h3 {
+		font-size: 1.5rem;
+	}
 }
