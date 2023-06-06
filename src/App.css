@@ -515,6 +515,12 @@ li:before {
 		padding: 1rem;
 		transition: all ease 0.3s;
 	}
+
+	.project-title {
+		font-size: 1.5rem;
+		margin: 0;
+		color: white;
+	}
 }
 
 @media screen and (max-width: 850px) {
@@ -533,6 +539,13 @@ li:before {
 
 	.timeline::after {
 		left: 0%;
+	}
+
+	.project-title {
+		font-size: 1rem;
+	}
+	.click-to-view {
+		font-size: 0.8rem;
 	}
 }
 
@@ -595,6 +608,13 @@ li:before {
 	.socials > a {
 		margin-left: 0;
 		margin-bottom: 1rem;
+	}
+
+	.project-title {
+		font-size: 0.8rem;
+	}
+	.click-to-view {
+		font-size: 0.7rem;
 	}
 }
 
