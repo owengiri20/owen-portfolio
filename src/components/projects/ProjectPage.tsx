@@ -13,6 +13,10 @@ export const ProjectPage = () => {
 		query: "(max-width: 1600px)",
 	})
 
+	const smol = useMediaQuery({
+		query: "(max-width: 600px)",
+	})
+
 	if (!project) return <div>no project</div>
 
 	const responsive2 = {
@@ -35,7 +39,8 @@ export const ProjectPage = () => {
 						backgroundSize: smallerScreens ? "cover" : "contain",
 						imageRendering: "-webkit-optimize-contrast",
 						backgroundRepeat: "no-repeat",
-						backgroundPosition: !smallerScreens ? project.backgroundPos ?? "center" : "center",
+						backgroundPosition: smallerScreens ? project.backgroundPos ?? "center" : "center",
+						width: smol ? "100%" : "none",
 					}}
 				></div>
 			</SimpleMotion>
