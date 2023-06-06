@@ -3,6 +3,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 90%;
+	max-width: 500px;
 }
 
 .contact form {
@@ -10,7 +12,7 @@
 	border-radius: 10px;
 
 	padding: 2rem;
-	width: 500px;
+	width: 100%;
 }
 
 .contact form h3 {

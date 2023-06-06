@@ -503,7 +503,7 @@ li:before {
 
 	.carousel-card {
 		width: 100% !important;
-		height: 20vh;
+		height: 24vh;
 		width: 85%;
 		filter: brightness(100%);
 		margin-bottom: 1rem;
@@ -608,13 +608,6 @@ li:before {
 	.socials > a {
 		margin-left: 0;
 		margin-bottom: 1rem;
-	}
-
-	.project-title {
-		font-size: 0.8rem;
-	}
-	.click-to-view {
-		font-size: 0.7rem;
 	}
 }
 
