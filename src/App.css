@@ -618,3 +618,13 @@ li.react-multi-carousel-item::before {
 li.react-multi-carousel-dot::before {
 	display: none;
 }
+
+div.react-pdf__Page__textContent {
+	display: none;
+	height: 0 !important;
+}
+
+div.react-pdf__Page__annotations {
+	display: none;
+	height: 0 !important;
+}
