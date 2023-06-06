@@ -35,7 +35,7 @@ export const ProjectPage = () => {
 						backgroundSize: smallerScreens ? "cover" : "contain",
 						imageRendering: "-webkit-optimize-contrast",
 						backgroundRepeat: "no-repeat",
-						backgroundPosition: smallerScreens ? project.backgroundPos ?? "center" : "center",
+						backgroundPosition: !smallerScreens ? project.backgroundPos ?? "center" : "center",
 					}}
 				></div>
 			</SimpleMotion>
