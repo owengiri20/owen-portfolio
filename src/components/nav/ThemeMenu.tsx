@@ -65,20 +65,40 @@ const ColorItem = ({ theme }: { theme: ThemeObj }) => {
 }
 
 export const ThemeChanger = () => {
-	const [themeState, setThemeState] = useState(localStorage.getItem("theme") || "light")
+	const [themeState, setThemeState] = useState(() => {
+		try {
+			// Get theme from local storage or default to user's preferred color scheme
+			const storedTheme = localStorage.getItem("theme")
+			if (storedTheme) {
+				return storedTheme
+			}
+
+			// Check for user's preferred color scheme
+			const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+			return prefersDark ? "dark" : "light"
+		} catch (e) {
+			// If localStorage access fails, fall back to 'light' theme
+			return "light"
+		}
+	})
 
 	useEffect(() => {
 		const { backgroundColor, cardBackgroundColor, footerBackgroundColor, textColor } = getTheme(themeState)
-		const r = document.documentElement
+		const rootElement = document.documentElement
 
-		if (r) {
-			r.style.setProperty("--background-color", backgroundColor)
-			r.style.setProperty("--card-background-color", cardBackgroundColor)
-			r.style.setProperty("--text-color", textColor)
-			r.style.setProperty("--footer-background-color", footerBackgroundColor)
+		if (rootElement) {
+			rootElement.style.setProperty("--background-color", backgroundColor)
+			rootElement.style.setProperty("--card-background-color", cardBackgroundColor)
+			rootElement.style.setProperty("--text-color", textColor)
+			rootElement.style.setProperty("--footer-background-color", footerBackgroundColor)
 		}
 
-		localStorage.setItem("theme", themeState)
+		try {
+			localStorage.setItem("theme", themeState)
+		} catch (e) {
+			// Handle localStorage failure
+			console.warn("Unable to access local storage")
+		}
 	}, [themeState])
 
 	const onChangeTheme = () => {

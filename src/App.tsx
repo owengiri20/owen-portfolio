@@ -12,7 +12,6 @@ import { getTheme } from "./components/nav/ThemeMenu"
 import { ProjectPage } from "./components/projects/ProjectPage"
 import { ProjectCarousel } from "./components/projects/Projects"
 import { CursorPage } from "./cursorTest/cursor"
-import { Resume } from "./components/Resume"
 
 function App() {
 	// set the theme
@@ -58,7 +57,6 @@ const RoutesX = () => {
 			<Route path="/projects/:id" element={<ProjectPage />} />
 			<Route path="/cursor" element={<CursorPage />} />
 			<Route path="/contact" element={<ContactForm />} />
-			<Route path="/resume" element={<Resume />} />
 		</Routes>
 	)
 }

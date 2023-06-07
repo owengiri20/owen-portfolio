@@ -31,7 +31,7 @@ const exps: Experience[] = [
 		role: "Full Stack Developer",
 		span: "2023 - Present",
 		description:
-			"At the start of 2023, I joinded Wevolt and  contributed to the development of an innovative electric vehicle charging station management solution. I played a key role in creating server-side services, integrating a data scraper for PlugShare, and designing a user-friendly front-end admin panel for efficient charging station management.",
+			"Kicking off 2023, I joined Wevolt and  contributed to the development of an innovative electric vehicle charging station management solution. I played a key role in creating server-side services, integrating a data scraper for PlugShare, and designing a user-friendly front-end admin panel for efficient charging station management.",
 		techs: ["Typscript", "React", "Chakra UI", "Golang", "Postgresql", "REST", "React Native", "Python"],
 		projects: [
 			{
@@ -50,7 +50,7 @@ const exps: Experience[] = [
 		role: "Full Stack Developer",
 		span: "2021 - 2022",
 		description:
-			"At the start of 2021, the Supremacy project kicked off, and now Ninja Software is tranforming from a consultant company to a full fledge gaming studio. Around this time the team grew astronomicaly about tripled in size. Whilst working in the Supremacy Project, I had the chance to work with many talented induviduals from 3D artist, content creators and Game Devs.",
+			"At the start of 2021, the Supremacy project kicked off, and now Ninja Software is transforming from a consultant company to a full fledge gaming studio. Around this time the team grew astronomically about tripled in size. Whilst working in the Supremacy Project, I had the chance to work with many talented individuals from 3D artist, content creators and Game Devs.",
 		techs: ["Typscript", "React", "Material UI", "Golang", "Postgresql", "REST", "Websockets", "Many more"],
 		projects: [
 			{
@@ -63,7 +63,7 @@ const exps: Experience[] = [
 			},
 			{
 				name: "Supremacy World",
-				tasks: ["Built admin UI to manage sales data", "Collabarated with other devs to create sales database schema"],
+				tasks: ["Built admin UI to manage sales data", "Collaborated with other devs to create sales database schema"],
 			},
 		],
 	},
@@ -73,7 +73,7 @@ const exps: Experience[] = [
 		role: "Intern / Full Stack Developer",
 		span: "2019 - 2021",
 		description:
-			"Somewhere inbtween my TAFE course i stumbled accross Ninja Software's website and this where i got my first taste of the industry. \n\nMy time with Ninja software was invaluable, i gained so much expierence, worked on a bunch of cool projects, and most importantly meet some of the best work collegues i can ever ask for.\n\nAfter a 3 month long internship i got the oppurtunity to transition from an internship role to being a junior full stack developer, during this time I worked in a flury of projects:\n\n- Zen, a customer/client management system for the Helping Minds company\n- Net Zero, A Sustainability Reporting Platform, tracking progress towards 'net zero' by creating graphs of baselines and indicators.\n- Ninja Software's Client Portal, I worked on an automated emailing service to send out stats (weekly report) of projects for Ninja's clients\n\nAnd many many more...",
+			"Somewhere in between my TAFE course i stumbled across Ninja Software's website and this where i got my first taste of the industry. \n\nMy time with Ninja software was invaluable, i gained so much experience, worked on a bunch of cool projects, and most importantly meet some of the best work colleagues i can ever ask for.\n\nAfter a 3 month long internship i got the opportunity to transition from an internship role to being a junior full stack developer, during this time I worked in a flurry of projects:\n\n- Zen, a customer/client management system for the Helping Minds company\n- Net Zero, A Sustainability Reporting Platform, tracking progress towards 'net zero' by creating graphs of baselines and indicators.\n- Ninja Software's Client Portal, I worked on an automated emailing service to send out stats (weekly report) of projects for Ninja's clients\n\nAnd many many more...",
 		techs: ["Typscript", "React", "Baseweb UI", "Golang", "Postgresql", "REST"],
 		projects: [
 			{
