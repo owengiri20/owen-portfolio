@@ -12,6 +12,7 @@ import { getTheme } from "./components/nav/ThemeMenu"
 import { ProjectPage } from "./components/projects/ProjectPage"
 import { ProjectCarousel } from "./components/projects/Projects"
 import { CursorPage } from "./cursorTest/cursor"
+import { SplashScreen } from "./TestingAnimation"
 
 function App() {
 	// set the theme
@@ -35,6 +36,7 @@ function App() {
 			<RoutesX />
 			<Nav />
 			<Footer />
+			<SplashScreen />
 		</div>
 	)
 }
@@ -57,6 +59,7 @@ const RoutesX = () => {
 			<Route path="/projects/:id" element={<ProjectPage />} />
 			<Route path="/cursor" element={<CursorPage />} />
 			<Route path="/contact" element={<ContactForm />} />
+			<Route path="/haha" element={<SplashScreen />} />
 		</Routes>
 	)
 }
