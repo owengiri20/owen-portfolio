@@ -27,11 +27,12 @@ export const Hero = () => {
 				</div>
 
 				{/* column 2 */}
-				<div className="drop-in">
+				<div className="drop-in-2">
 					<img src={OwenJPG} className="owen" alt="bing-chilling" />
 				</div>
 			</div>
-			<div className="contact-container">
+
+			<div className="contact-container float-down">
 				<button
 					onClick={() => {
 						nav("/contact")
