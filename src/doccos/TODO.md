@@ -1,6 +1,9 @@
 
 TODO
 
+- fix that menu
+- personal projects section
+
 - changelog
 - on hover preview
 - cool mouse cursor

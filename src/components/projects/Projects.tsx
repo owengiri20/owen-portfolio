@@ -25,6 +25,12 @@ import Zen2 from "./assets/zen2.png"
 import Zen3 from "./assets/zen3.png"
 import { useMediaQuery } from "react-responsive"
 
+// TrekTyper
+import TTPng from "./assets/tt.png"
+import TT2 from "./assets/tt2.png"
+
+
+
 interface Project {
 	slug: string
 	url: string
@@ -35,6 +41,7 @@ interface Project {
 	images: string[]
 	tasks: string[]
 	techs: string[]
+	personal?: boolean
 
 	// style
 	backgroundPos?: string
@@ -98,18 +105,19 @@ const projs: Project[] = [
 		],
 		techs: ["Golang", "Typescript", "React", "RESTful APIs", "Base Web UI", "Google Maps API"],
 	},
-	// {
-	// 	slug: "tt",
-	// 	url: "https://tt-typingtest.netlify.app/",
-	// 	name: "TT - Typing test (side project)",
-	// 	description:
-	// 		"I decided to build a typing test using Material UI as a way to not only improve my typing skills, but also to learn more about the library. I have always been a fan of typing games like Typeracer and Monkeytype, and I thought that building my own typing test would be a fun and challenging project.",
+	{
+		slug: "tt",
+		url: "https://tt-typingtest.netlify.app/",
+		name: "TT - TrekTyper",
+		personal: true,
+		description:
+			`TrekTyper - a side project I've been working on and off for the past couple of years in my spare time, a minimalistic typing game/test built with react and typescript. more and more features will be added to this project soon, some include: stats, user profiles, theme changer and more.`,
 
-	// 	imageURL: "https://user-images.githubusercontent.com/46738862/208370952-35f4e37c-e173-48bc-a143-d2741f86fc2e.png",
-	// 	images: [],
-	// 	tasks: [],
-	// 	techs: ["React", "Typescript", "Material UI"],
-	// },
+		imageURL: TTPng,
+		images: [TTPng, TT2],
+		tasks: [],
+		techs: ["React", "Typescript", "Material UI"],
+	},
 ]
 
 export const GetProject = (slug: string) => {
@@ -123,15 +131,22 @@ export const GetProject = (slug: string) => {
 	return filtered[0]
 }
 
-export const ProjectCarousel = () => {
-	const [selected, setSelected] = useState(projs[0].name)
+interface ProjectCarouselProps {
+ personalOnly?: boolean
+ title: string 
+}
+
+export const ProjectCarousel = (props: ProjectCarouselProps) => {
+	const {personalOnly, title} = props
+	const filteredProjects = personalOnly ? projs.filter((p => p.personal)) : projs.filter(p => !p.personal) 
+	const [selected, setSelected] = useState(filteredProjects[0].name)
 
 	return (
-		<div className="content-container" id="projects">
+		<div className="content-container"  id="projects">
 			<SimpleMotion>
-				<h2 className="content-title">WORK</h2>
+				<h2 className="content-title">{title}</h2>
 				<div className="carousel">
-					{projs.map((p) => {
+					{filteredProjects.map((p) => {
 						return (
 							<ProjectCarouselCard
 								key={p.name}
@@ -140,6 +155,7 @@ export const ProjectCarousel = () => {
 								onClick={() => {
 									setSelected(p.name)
 								}}
+								fullWidth={personalOnly}
 							/>
 						)
 					})}
@@ -149,7 +165,7 @@ export const ProjectCarousel = () => {
 	)
 }
 
-export const ProjectCarouselCard = ({ project, onClick, isSelected }: { isSelected: boolean; project: Project; onClick: () => void }) => {
+export const ProjectCarouselCard = ({ fullWidth, project, onClick, isSelected }: { fullWidth?: boolean, isSelected: boolean; project: Project; onClick: () => void }) => {
 	const nav = useNavigate()
 	const { name, imageURL, slug } = project
 	const smallerScreens = useMediaQuery({
@@ -165,6 +181,7 @@ export const ProjectCarouselCard = ({ project, onClick, isSelected }: { isSelect
 				backgroundSize: "cover",
 				backgroundPosition: "center",
 				backgroundRepeat: "no-repeat",
+				width: fullWidth ?  "100%" : ""
 			}}
 		>
 			{(smallerScreens || isSelected) && (
