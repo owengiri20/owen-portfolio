@@ -28,8 +28,7 @@ import { useMediaQuery } from "react-responsive"
 // TrekTyper
 import TTPng from "./assets/tt.png"
 import TT2 from "./assets/tt2.png"
-
-
+import TT3 from "./assets/tt3.png"
 
 interface Project {
 	slug: string
@@ -107,14 +106,13 @@ const projs: Project[] = [
 	},
 	{
 		slug: "tt",
-		url: "https://tt-typingtest.netlify.app/",
+		url: "https://typinggame.owengiri.dev/",
 		name: "TT - TrekTyper",
 		personal: true,
-		description:
-			`TrekTyper - a side project I've been working on and off for the past couple of years in my spare time, a minimalistic typing game/test built with react and typescript. more and more features will be added to this project soon, some include: stats, user profiles, theme changer and more.`,
+		description: `TrekTyper - a side project I've been working on and off for the past couple of years in my spare time, a minimalistic typing game/test built with react and typescript. more and more features will be added to this project soon, some include: stats, user profiles, theme changer and more.`,
 
 		imageURL: TTPng,
-		images: [TTPng, TT2],
+		images: [TT3, TTPng, TT2],
 		tasks: [],
 		techs: ["React", "Typescript", "Material UI"],
 	},
@@ -132,17 +130,17 @@ export const GetProject = (slug: string) => {
 }
 
 interface ProjectCarouselProps {
- personalOnly?: boolean
- title: string 
+	personalOnly?: boolean
+	title: string
 }
 
 export const ProjectCarousel = (props: ProjectCarouselProps) => {
-	const {personalOnly, title} = props
-	const filteredProjects = personalOnly ? projs.filter((p => p.personal)) : projs.filter(p => !p.personal) 
+	const { personalOnly, title } = props
+	const filteredProjects = personalOnly ? projs.filter((p) => p.personal) : projs.filter((p) => !p.personal)
 	const [selected, setSelected] = useState(filteredProjects[0].name)
 
 	return (
-		<div className="content-container"  id="projects">
+		<div className="content-container" id="projects">
 			<SimpleMotion>
 				<h2 className="content-title">{title}</h2>
 				<div className="carousel">
@@ -165,7 +163,17 @@ export const ProjectCarousel = (props: ProjectCarouselProps) => {
 	)
 }
 
-export const ProjectCarouselCard = ({ fullWidth, project, onClick, isSelected }: { fullWidth?: boolean, isSelected: boolean; project: Project; onClick: () => void }) => {
+export const ProjectCarouselCard = ({
+	fullWidth,
+	project,
+	onClick,
+	isSelected,
+}: {
+	fullWidth?: boolean
+	isSelected: boolean
+	project: Project
+	onClick: () => void
+}) => {
 	const nav = useNavigate()
 	const { name, imageURL, slug } = project
 	const smallerScreens = useMediaQuery({
@@ -181,7 +189,7 @@ export const ProjectCarouselCard = ({ fullWidth, project, onClick, isSelected }:
 				backgroundSize: "cover",
 				backgroundPosition: "center",
 				backgroundRepeat: "no-repeat",
-				width: fullWidth ?  "100%" : ""
+				width: fullWidth ? "100%" : "",
 			}}
 		>
 			{(smallerScreens || isSelected) && (
