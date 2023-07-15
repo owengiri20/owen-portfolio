@@ -109,12 +109,12 @@ const projs: Project[] = [
 		url: "https://typinggame.owengiri.dev/",
 		name: "TT - TrekTyper",
 		personal: true,
-		description: `TrekTyper - a side project I've been working on and off for the past couple of years in my spare time, a minimalistic typing game/test built with react and typescript. more and more features will be added to this project soon, some include: stats, user profiles, theme changer and more.`,
+		description: `TrekTyper - a side project I've been working on and off in my spare time, typing game/test built with react and typescript. Some features include: profile page, avatars, leaderboards, player stats. Any and all feedback are wellcome (:`,
 
 		imageURL: TTPng,
 		images: [TT3, TTPng, TT2],
 		tasks: [],
-		techs: ["React", "Typescript", "Material UI"],
+		techs: ["React", "Typescript", "Material UI", "Golang", "Postgres", "AWS SES", "AWS S3", "Netlify", "Digital Ocean"],
 	},
 ]
 

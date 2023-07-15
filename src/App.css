@@ -294,7 +294,7 @@ footer {
 	margin-right: 15px;
 	background-color: var(--text-color);
 	color: var(--background-color);
-	padding: 1rem 1.5rem;
+	padding: 1rem 1rem;
 	text-transform: uppercase;
 	border-radius: 3px;
 	cursor: pointer;
@@ -478,9 +478,12 @@ li:before {
 	}
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 920px), (max-height: 730px) {
 	.hero {
 		max-width: 600px;
+	}
+	.hero > .column-1 > h1 {
+		font-size: 4rem;
 	}
 	.owen {
 		height: 16rem;
@@ -498,6 +501,9 @@ li:before {
 		width: 40%;
 	}
 
+	.contact-container button {
+		transform: scale(0.9);
+	}
 	.carousel {
 		display: flex;
 		flex-direction: column;

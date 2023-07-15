@@ -44,9 +44,8 @@ const Landing = () => {
 		<>
 			<Hero />
 			<AboutMe />
-			<ProjectCarousel title="WORK" />
 			<ProjectCarousel title="PERSONAL PROJECTS" personalOnly />
-
+			<ProjectCarousel title="WORK" />
 			<ExperienceTimeline />
 		</>
 	)
